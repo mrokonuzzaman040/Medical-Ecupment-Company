@@ -1,3 +1,6 @@
+import React from 'react';
+import { FaFacebook, FaInstagram, FaMailBulk, FaLinkedin } from "react-icons/fa";
+
 
 
 const config = {
@@ -5,8 +8,8 @@ const config = {
     site: {
         titel: 'Khan Bio Tech',
         description: 'Khan Bio Tech is a leading supplier of reagents, equipment and consumables for laboratories and research centers.',
-        image: '/images/logo.png',
-        logo: '/images/logo.png',
+        images: '/site/logo.png',
+        logo: '/site/logo.png',
         url: '/',
     },
 
@@ -123,10 +126,26 @@ const config = {
     },
 
     sociallinks: {
-        facebook: 'https://www.facebook.com/',
-        twitter: 'https://www.twitter.com/',
-        linkedin: 'https://www.linkedin.com/',
-        instagram: 'https://www.instagram.com/',
+        facebook: {
+            name: 'Facebook',
+            link: 'https://www.facebook.com/',
+            icon: <FaFacebook />
+        },
+        twitter: {
+            name: 'Twitter',
+            link: 'https://www.twitter.com/',
+            icon: <FaMailBulk />
+        },
+        linkedin: {
+            name: 'LinkedIn',
+            link: 'https://www.linkedin.com/',
+            icon: <FaInstagram />
+        },
+        instagram: {
+            name: 'Instagram',
+            link: 'https://www.instagram.com/',
+            icon: <FaInstagram />
+        },
     },
 };
 
