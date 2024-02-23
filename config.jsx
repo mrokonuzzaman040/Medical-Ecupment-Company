@@ -186,7 +186,7 @@ const config = {
                 name: 'View More',
                 link: '/biochemistryreagents'
             },
-            image: '/site/biochemistryreagents.jpg'
+            image: '/site/pic-1.jpg'
         },
         {
             title: 'Serology Reagents',
@@ -195,7 +195,7 @@ const config = {
                 name: 'View More',
                 link: '/serologyreagents'
             },
-            image: '/site/serologyreagents.jpg'
+            image: '/site/pic-2.jpg'
         },
         {
             title: 'ELISA Reagents',
@@ -204,7 +204,7 @@ const config = {
                 name: 'View More',
                 link: '/elisareagents'
             },
-            image: '/site/elisareagents.jpg'
+            image: '/site/pic-3.jpg'
         },
         {
             title: 'Equipment 1',
@@ -213,7 +213,7 @@ const config = {
                 name: 'View More',
                 link: '/equipment1'
             },
-            image: '/site/equipment1.jpg'
+            image: '/site/pic-4.jpg'
         },
         {
             title: 'Equipment 2',
@@ -222,7 +222,7 @@ const config = {
                 name: 'View More',
                 link: '/equipment2'
             },
-            image: '/site/equipment2.jpg'
+            image: '/site/pic-5.jpg'
         },
         {
             title: 'Equipment 3',
@@ -231,7 +231,7 @@ const config = {
                 name: 'View More',
                 link: '/equipment3'
             },
-            image: '/site/equipment3.jpg'
+            image: '/site/pic-6.jpg'
         },
     ],
 };
