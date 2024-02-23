@@ -4,17 +4,19 @@ import { Link } from 'react-router-dom';
 const ProductsCard = ( { title, description, image, name, link } ) => {
     return (
         <>
-            <div className="product-item p-2 flex flex-col gap-3">
-                <img src={ image } alt={ title } className='w-full h-96 rounded-2xl' />
-                <div className="product-content">
-                    <h3 className='text-xl font-mono text-center'>{ title }</h3>
-                    <p className='text-sm font-light'>{ description }</p>
+            <Link className="flex flex-col group bg-white border shadow-sm rounded-xl overflow-hidden hover:shadow-lg transition dark:bg-slate-900 dark:border-gray-700 dark:shadow-slate-700/[.7]" to={ link }>
+                <div className="relative pt-[50%] sm:pt-[60%] lg:pt-[80%] rounded-t-xl overflow-hidden">
+                    <img className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out rounded-t-xl" src={ image } alt="Image Description" />
                 </div>
-
-                <div className="product-footer">
-                    <Link to={ link } type="button" className="py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-teal-500 shadow-sm hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none "> { name }</Link>
+                <div className="p-4 md:p-5">
+                    <h3 className="text-lg font-bold text-gray-800 dark:text-white">
+                        { title }
+                    </h3>
+                    <p className="mt-1 text-gray-500 dark:text-gray-400">
+                        { description.slice( 0, 100 ) }
+                    </p>
                 </div>
-            </div>
+            </Link>
         </>
     );
 };
