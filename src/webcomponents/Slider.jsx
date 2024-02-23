@@ -1,7 +1,6 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import { config } from '../../config';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -38,17 +37,21 @@ const Slider = () => {
                 navigation={ true }
                 modules={ [ Autoplay, Pagination, Navigation ] }
                 onAutoplayTimeLeft={ onAutoplayTimeLeft }
-                className="mySwiper"
+                className="mySwiper rounded-xl overflow-hidden shadow-lg w-auto h-auto relative"
             >
-                <SwiperSlide>Slide 1</SwiperSlide>
-                <SwiperSlide>Slide 2</SwiperSlide>
-                <SwiperSlide>Slide 3</SwiperSlide>
-                <SwiperSlide>Slide 4</SwiperSlide>
-                <SwiperSlide>Slide 5</SwiperSlide>
-                <SwiperSlide>Slide 6</SwiperSlide>
-                <SwiperSlide>Slide 7</SwiperSlide>
-                <SwiperSlide>Slide 8</SwiperSlide>
-                <SwiperSlide>Slide 9</SwiperSlide>
+                {
+                    config.slidercontent.map( ( item, index ) => (
+                        <SwiperSlide key={ index }>
+                            <div className="slider-item">
+                                <img src={ item.image } alt={ item.title } />
+                                <div className="slider-content">
+                                    <h3>{ item.title }</h3>
+                                    <p>{ item.description }</p>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    ) )
+                }
                 <div className="autoplay-progress" slot="container-end">
                     <svg viewBox="0 0 48 48" ref={ progressCircle }>
                         <circle cx="24" cy="24" r="20"></circle>

@@ -147,6 +147,93 @@ const config = {
             icon: <FaInstagram />
         },
     },
+
+    slidercontent: [
+        {
+            title: 'Welcome to Khan Bio Tech',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'Get Started',
+                link: '/products'
+            },
+            image: '/site/slider1.jpg'
+        },
+        {
+            title: 'Welcome to Khan Bio Tech',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'Get Started',
+                link: '/products'
+            },
+            image: '/site/slider2.jpg'
+        },
+        {
+            title: 'Welcome to Khan Bio Tech',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'Get Started',
+                link: '/products'
+            },
+            image: '/site/slider3.jpg'
+        }
+    ],
+
+    productsContent: [
+        {
+            title: 'Biochemistry Reagents',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/biochemistryreagents'
+            },
+            image: '/site/biochemistryreagents.jpg'
+        },
+        {
+            title: 'Serology Reagents',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/serologyreagents'
+            },
+            image: '/site/serologyreagents.jpg'
+        },
+        {
+            title: 'ELISA Reagents',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/elisareagents'
+            },
+            image: '/site/elisareagents.jpg'
+        },
+        {
+            title: 'Equipment 1',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/equipment1'
+            },
+            image: '/site/equipment1.jpg'
+        },
+        {
+            title: 'Equipment 2',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/equipment2'
+            },
+            image: '/site/equipment2.jpg'
+        },
+        {
+            title: 'Equipment 3',
+            description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+            button: {
+                name: 'View More',
+                link: '/equipment3'
+            },
+            image: '/site/equipment3.jpg'
+        },
+    ],
 };
 
 export { config }
