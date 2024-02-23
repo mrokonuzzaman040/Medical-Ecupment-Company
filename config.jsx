@@ -258,6 +258,49 @@ const config = {
             email: 'test@gmail.com'
         },
     ],
+
+    ourClientsSlider: [
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 1'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 2'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 3'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 4'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 5'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 6'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 7'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 8'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 9'
+        },
+        {
+            logo: '/site/pic-3.jpg',
+            alt: 'Client 10'
+        },
+    ],
 };
 
 export { config }
