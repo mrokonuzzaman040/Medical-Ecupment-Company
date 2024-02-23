@@ -234,6 +234,30 @@ const config = {
             image: '/site/pic-6.jpg'
         },
     ],
+
+    branchContent: [
+        {
+            titel: 'Branch 1',
+            branch: 'Branch 1',
+            address: '123, Lorem Ipsum, Dolor Sit, Amet, Consectetur, 12345',
+            contact: '1234567890',
+            email: 'test@gmail.com'
+        },
+        {
+            titel: 'Branch 2',
+            branch: 'Branch 2',
+            address: '123, Lorem Ipsum, Dolor Sit, Amet, Consectetur, 12345',
+            contact: '1234567890',
+            email: 'test@gmail.com'
+        },
+        {
+            titel: 'Branch 3',
+            branch: 'Branch 3',
+            address: '123, Lorem Ipsum, Dolor Sit, Amet, Consectetur, 12345',
+            contact: '1234567890',
+            email: 'test@gmail.com'
+        },
+    ],
 };
 
 export { config }
