@@ -52,8 +52,8 @@ const router = createBrowserRouter( [
                 path: "/product-category/:category",
                 element: <ProductsCategory />,
                 loader: async ( { params } ) => {
-                    const products = config.navbar.products.reagent.items.filter( ( item ) => item.category === params.category );
-                    return { products, category: params.category };
+                    const product = config.reagent.find( ( item ) => item.category === params.category );
+                    return product;
                 },
             },
         ],

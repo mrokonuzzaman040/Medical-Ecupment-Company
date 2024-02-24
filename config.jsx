@@ -302,7 +302,152 @@ const config = {
         },
     ],
 
-    
+    biochemistryreagents: [
+        {
+            name: 'Albumin',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Bilirubin (T & D)',
+            packSize: '2 x 100 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Total Cholesterol',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Creatinine',
+            packSize: '2 x 100 ml',
+            test: '200 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Glucose',
+            packSize: '5 x 100 ml',
+            test: '500 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Glucose',
+            packSize: '1000 ml',
+            test: '1000 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'HDL Cholesterol (Direct)',
+            packSize: '2 x 40 ml',
+            test: '133 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'LDL Cholesterol (Direct)',
+            packSize: '2 x 40 ml',
+            test: '133 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Total Protein',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Triglyceride',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Urea (Kin)',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Uric Acid',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Alkaline Phosphatase',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Alpha Amylase',
+            packSize: '5 x 10 ml',
+            test: '50 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Micro Protein',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'AST/SGOT',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'ALT/SGPT',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'LDH',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Lipase',
+            packSize: '2 x 12 ml',
+            test: '20 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Calcium',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'S. Iron',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Inorganic Phosphorus',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Magnesium',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'CK-MB',
+            packSize: '2 X 10 ml',
+            test: '20 Test',
+            brand: 'GB, India'
+        }
+    ],
 };
 
 export { config }
