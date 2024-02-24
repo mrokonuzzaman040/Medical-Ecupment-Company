@@ -9,7 +9,7 @@ const Products = () => {
             <div className="">
                 <Header titel="Products" />
             </div>
-            <div className="grid grid-cols-3 gap-5">
+            <div className="grid lg:grid-cols-3 sm:grid-cols-1 md:grid-cols-2 gap-5">
                 {
                     config.productsContent.map( ( item, index ) => (
                         <ProductsCard title={ item.title } description={ item.description } image={ item.image } name={ item.button.name } link={ item.button.link } />
