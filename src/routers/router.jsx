@@ -11,6 +11,10 @@ import Root from "../webcomponents/Root";
 import Error from "../components/Error/Error";
 import ProductsDetails from "../components/ProductsDetails/ProductsDetails";
 import ProductsCategory from "../components/ProductsCategory/ProductsCategory";
+import Layout from "../Admin/Dashboard/Layout";
+import AddProduct from "../Admin/CRUD/AddProduct";
+import EditProduct from "../Admin/CRUD/EditProduct";
+import AllProducts from "../Admin/CRUD/Products/AllProducts";
 
 const router = createBrowserRouter( [
     {
@@ -56,8 +60,35 @@ const router = createBrowserRouter( [
                     return product;
                 },
             },
+            {
+                path: 'dashboard',
+                element: <Layout />,
+                children: [
+                    {
+                        path: 'add-product',
+                        element: <AddProduct />,
+                    },
+                    {
+                        path: 'edit-product',
+                        element: <EditProduct />,
+                    },
+                    {
+                        path: 'products',
+                        element: <AllProducts />,
+                    },
+                    {
+                        path: 'error',
+                        element: <Error />,
+                    },
+                ],
+            }
         ],
     },
+    {
+        path: "*",
+        element: <Error />,
+    },
+
 ] );
 
 export default router;
