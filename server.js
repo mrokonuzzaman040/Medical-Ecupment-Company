@@ -91,10 +91,10 @@ app.delete( '/api/reagents/:id', ( req, res ) => {
 } );
 
 app.post( '/api/reagents', ( req, res ) => {
-    const product = req.body;
-    connection.query( 'INSERT INTO reagents SET ?', [ product ], ( err, results ) => {
+    const reagents = req.body;
+    connection.query( 'INSERT INTO reagents SET ?', [ reagents ], ( err, results ) => {
         if ( err ) {
-            res.status( 500 ).send( 'Error adding product' );
+            res.status( 500 ).send( err );
             return;
         }
         res.status( 200 ).send( 'Product added' );

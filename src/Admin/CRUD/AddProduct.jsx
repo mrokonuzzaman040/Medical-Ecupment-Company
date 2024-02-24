@@ -7,14 +7,20 @@ const AddProduct = () => {
 
     const addProduct = ( e ) => {
         e.preventDefault();
-        const category = e.target.category.value;
+        const catagory = e.target.catagory.value;
         const name = e.target.name.value;
         const packSize = e.target.packSize.value;
         const test = e.target.test.value;
         const brand = e.target.brand.value;
 
+
+        // check all the input fields
+        if ( catagory === "" || name === "" || packSize === "" || test === "" || brand === "" ) {
+            return alert( "Please fill all the fields" );
+        }
+
         const product = {
-            category,
+            catagory,
             name,
             packSize,
             test,
@@ -23,13 +29,11 @@ const AddProduct = () => {
 
         axiosPublic.post( '/reagents', product )
             .then( ( response ) => {
-                console.log( response );
+                const message = window.confirm( 'Product added successfully' );
             } )
-            .catch( ( error ) => {
-                console.error( "Error adding product:", error );
-            } );
 
-        console.log( product );
+
+        e.target.reset();
     };
     return (
         <div>
@@ -39,23 +43,23 @@ const AddProduct = () => {
             <div className="">
                 <form onSubmit={ addProduct }>
                     <div className="">
-                        <label htmlFor="category" className="block text-sm font-medium text-gray-700">Category</label>
-                        <input type="text" name="category" id="category" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                        <label htmlFor="catagory" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">catagory</label>
+                        <input type="text" name="catagory" id="catagory" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                     </div>
                     <div className="">
-                        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+                        <label htmlFor="name" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Name</label>
                         <input type="text" name="name" id="name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                     </div>
                     <div className="">
-                        <label htmlFor="packSize" className="block text-sm font-medium text-gray-700">Package Size</label>
+                        <label htmlFor="packSize" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Package Size</label>
                         <input type="text" name="packSize" id="packSize" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                     </div>
                     <div className="">
-                        <label htmlFor="test" className="block text-sm font-medium text-gray-700">Test</label>
+                        <label htmlFor="test" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Test</label>
                         <input type="text" name="test" id="test" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                     </div>
                     <div className="">
-                        <label htmlFor="brand" className="block text-sm font-medium text-gray-700">Brand</label>
+                        <label htmlFor="brand" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Brand</label>
                         <input type="text" name="brand" id="brand" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
                     </div>
                     <div className="">
