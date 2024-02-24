@@ -184,7 +184,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/biochemistryreagents'
+                link: 'biochemistryreagents'
             },
             image: '/site/pic-1.jpg'
         },
@@ -193,7 +193,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/serologyreagents'
+                link: 'serologyreagents'
             },
             image: '/site/pic-2.jpg'
         },
@@ -202,7 +202,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/elisareagents'
+                link: 'elisareagents'
             },
             image: '/site/pic-3.jpg'
         },
@@ -211,7 +211,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/equipment1'
+                link: 'equipment1'
             },
             image: '/site/pic-4.jpg'
         },
@@ -220,7 +220,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/equipment2'
+                link: 'equipment2'
             },
             image: '/site/pic-5.jpg'
         },
@@ -229,7 +229,7 @@ const config = {
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
             button: {
                 name: 'View More',
-                link: '/equipment3'
+                link: 'equipment3'
             },
             image: '/site/pic-6.jpg'
         },

@@ -1,4 +1,5 @@
 import * as React from "react";
+import { config } from "../../config";
 import {
     createBrowserRouter,
 } from "react-router-dom";
@@ -7,6 +8,8 @@ import Ourclients from "../webcomponents/Ourclients";
 import Ourbranchs from "../webcomponents/Ourbranchs";
 import Contact from "../webcomponents/Contact";
 import Root from "../webcomponents/Root";
+import Error from "../components/Error/Error";
+import ProductsDetails from "../components/ProductsDetails/ProductsDetails";
 
 const router = createBrowserRouter( [
     {
@@ -28,6 +31,20 @@ const router = createBrowserRouter( [
             {
                 path: "/contact",
                 element: <Contact />,
+            },
+            // Error page
+            {
+                path: "*",
+                element: <Error />,
+            },
+            // Product page
+            {
+                path: "/product/:id",
+                element: <ProductsDetails />,
+                loader: async ( { params } ) => {
+                    const product = config.productsContent.find( ( item ) => item.button.link === params.id );
+                    return product;
+                },
             },
         ],
     },
