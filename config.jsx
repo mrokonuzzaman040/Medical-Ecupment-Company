@@ -301,6 +301,8 @@ const config = {
             alt: 'Client 10'
         },
     ],
+
+    
 };
 
 export { config }
