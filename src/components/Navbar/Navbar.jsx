@@ -39,7 +39,7 @@ const Navbar = () => {
                                                     <div className="space-y-4">
                                                         <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">{ config.navbar.products.reagent.title }</span>
                                                         { config.navbar.products.reagent.items.map( ( product, index ) => (
-                                                            <Link className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to={ product.link }>
+                                                            <Link className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to={ `/product-category/${product.link}` }>
                                                                 <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
                                                                 <div className="grow">
                                                                     <p>{ product.name }</p>

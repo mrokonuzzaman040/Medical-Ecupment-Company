@@ -10,6 +10,7 @@ import Contact from "../webcomponents/Contact";
 import Root from "../webcomponents/Root";
 import Error from "../components/Error/Error";
 import ProductsDetails from "../components/ProductsDetails/ProductsDetails";
+import ProductsCategory from "../components/ProductsCategory/ProductsCategory";
 
 const router = createBrowserRouter( [
     {
@@ -43,6 +44,15 @@ const router = createBrowserRouter( [
                 element: <ProductsDetails />,
                 loader: async ( { params } ) => {
                     const product = config.productsContent.find( ( item ) => item.button.link === params.id );
+                    return product;
+                },
+            },
+            // Product category page
+            {
+                path: "/product-category/:category",
+                element: <ProductsCategory />,
+                loader: async ( { params } ) => {
+                    const product = config.navbar.products.reagent.items.find( ( item ) => item.category === params.category );
                     return product;
                 },
             },

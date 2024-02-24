@@ -23,25 +23,25 @@ const config = {
             reagent: {
                 title: 'Reagent',
                 items: [
-                    { name: 'Biochemistry Reagents', link: '/biochemistryreagents' },
-                    { name: 'Serology Reagents', link: '/serologyreagents' },
-                    { name: 'ELISA Reagents', link: '/elisareagents' },
+                    { name: 'Biochemistry Reagents', link: 'biochemistryreagents' },
+                    { name: 'Serology Reagents', link: 'serologyreagents' },
+                    { name: 'ELISA Reagents', link: 'elisareagents' },
                 ]
             },
             equipment: {
                 title: 'Equipment',
                 items: [
-                    { name: 'Equipment 1', link: '/equipment1' },
-                    { name: 'Equipment 2', link: '/equipment2' },
-                    { name: 'Equipment 3', link: '/equipment3' },
+                    { name: 'Equipment 1', link: 'equipment1' },
+                    { name: 'Equipment 2', link: 'equipment2' },
+                    { name: 'Equipment 3', link: 'equipment3' },
                 ]
             },
             consumable: {
                 title: 'Consumable',
                 items: [
-                    { name: 'Consumable 1', link: '/consumable1' },
-                    { name: 'Consumable 2', link: '/consumable2' },
-                    { name: 'Consumable 3', link: '/consumable3' },
+                    { name: 'Consumable 1', link: 'consumable1' },
+                    { name: 'Consumable 2', link: 'consumable2' },
+                    { name: 'Consumable 3', link: 'consumable3' },
                 ]
             },
         },
