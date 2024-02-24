@@ -156,7 +156,7 @@ const config = {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/slider1.jpg'
+            image: '/site/pic-1.jpg'
         },
         {
             title: 'Welcome to Khan Bio Tech',
@@ -165,7 +165,7 @@ const config = {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/slider2.jpg'
+            image: '/site/pic-1.jpg'
         },
         {
             title: 'Welcome to Khan Bio Tech',
@@ -174,7 +174,7 @@ const config = {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/slider3.jpg'
+            image: '/site/pic-1.jpg'
         }
     ],
 

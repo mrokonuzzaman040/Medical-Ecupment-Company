@@ -43,7 +43,7 @@ const Slider = () => {
                     config.slidercontent.map( ( item, index ) => (
                         <SwiperSlide key={ index }>
                             <div className="slider-item">
-                                <img src={ item.image } alt={ item.title } />
+                                <img className='w-12 h-12' src={ item.image } alt={ item.title } />
                                 <div className="slider-content">
                                     <h3>{ item.title }</h3>
                                     <p>{ item.description }</p>
