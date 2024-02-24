@@ -58,24 +58,13 @@ app.get( '/api/contact', ( req, res ) => {
     } );
 } );
 
-app.get( '/api/products', ( req, res ) => {
-    connection.query( 'SELECT * FROM products', ( err, results ) => {
+app.get( '/api/reagents', ( req, res ) => {
+    connection.query( 'SELECT * FROM reagents', ( err, results ) => {
         if ( err ) {
             res.status( 500 ).send( 'Error retrieving data from database' );
             return;
         }
         res.json( results );
-    } );
-}
-);
-
-app.get( '/api/products/:id', ( req, res ) => {
-    connection.query( 'SELECT * FROM products WHERE id = ?', [ req.params.id ], ( err, results ) => {
-        if ( err ) {
-            res.status( 500 ).send( 'Error retrieving data from database' );
-            return;
-        }
-        res.json( results[ 0 ] );
     } );
 }
 );
@@ -91,14 +80,24 @@ app.get( '/api/products-category/:category', ( req, res ) => {
 }
 );
 
-app.post( 'api/reagents', ( req, res ) => {
-    const reagent = req.body;
-    connection.query( 'INSERT INTO reagents SET ?', reagent, ( err, result ) => {
+app.delete( '/api/reagents/:id', ( req, res ) => {
+    connection.query( 'DELETE FROM reagents WHERE id = ?', [ req.params.id ], ( err ) => {
         if ( err ) {
-            res.status( 500 ).send( 'Error saving reagent' );
+            res.status( 500 ).send( 'Error deleting reagent' );
             return;
         }
-        res.status( 201 ).send( 'Reagent added with ID: ${result.insertId}' );
+        res.status( 200 ).send( 'Reagent deleted' );
+    } );
+} );
+
+app.post( '/api/reagents', ( req, res ) => {
+    const product = req.body;
+    connection.query( 'INSERT INTO reagents SET ?', [ product ], ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error adding product' );
+            return;
+        }
+        res.status( 200 ).send( 'Product added' );
     } );
 } );
 
