@@ -1,10 +1,6 @@
 import React from 'react';
 import Header from '../../webcomponents/Carts/Header';
-import { config } from '../../../config';
 import usePublicApi from '../../Admin/AxiosHandeler/usePublicApi';
-
-import { TiTick } from "react-icons/ti";
-
 
 const ProductsCategory = () => {
     const [ data, setData ] = React.useState( [] );
@@ -42,7 +38,9 @@ const ProductsCategory = () => {
                                 <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700 ">
                                     <thead>
                                         <tr>
-                                            <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Category</th>
+                                            <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Id</th>
+                                            <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">catagory</th>
+                                            <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">brand</th>
                                             <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Reagent Name</th>
                                             <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Pack Size</th>
                                             <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Test</th>
@@ -54,23 +52,22 @@ const ProductsCategory = () => {
                                                 return (
                                                     <tr key={ index } className="bg-white dark:bg-gray-800">
                                                         <td className="px-6 py-4 whitespace-nowrap">
-                                                            <div className="flex items-center">
-                                                                <div className="flex-shrink-0 h-10 w-10">
-                                                                    <TiTick className="h-10 w-10 text-indigo-400" />
-                                                                </div>
-                                                                <div className="ml-4">
-                                                                    <div className="text-sm font-medium text-gray-900 dark:text-gray-200">{ reagent.category }</div>
-                                                                </div>
-                                                            </div>
+                                                            <div className="text-sm text-gray-900 dark:text-gray-200">{ reagent.id }</div>
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap">
-                                                            <div className="text-sm text-gray-900 dark:text-gray-200">{ reagent.name }</div>
+                                                            <div className="text-sm text-gray-900 dark:text-gray-200">{ reagent.catagory }</div>
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap">
-                                                            <div className="text-sm text-gray-900 dark:text-gray-200">{ reagent.packSize }</div>
+                                                            <div className="text-sm text-gray-900 dark:text-gray-200">{ reagent.brand }</div>
                                                         </td>
                                                         <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
-                                                            <p className="text-indigo-400 hover:text-indigo-900">{ reagent.test }</p>
+                                                            <p className="text-gray-200">{ reagent.name }</p>
+                                                        </td>
+                                                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                            <p className="text-gray-200">{ reagent.packSize }</p>
+                                                        </td>
+                                                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                                            <p className="text-gray-200">{ reagent.test }</p>
                                                         </td>
                                                     </tr>
                                                 );
