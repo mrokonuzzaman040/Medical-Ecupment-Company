@@ -1,19 +1,20 @@
 import React from 'react';
 import usePublicApi from '../Admin/AxiosHandeler/usePublicApi';
+import { useQuery } from '@tanstack/react-query';
+
 
 const PublicProduct = ( { api } ) => {
     const [ data, setData ] = React.useState( [] );
-    const [ loading, setLoading ] = React.useState( true );
-    const PublicApi = usePublicApi();
+    const axiosPublic = usePublicApi();
 
-    PublicApi.get( `${api}` )
-        .then( ( response ) => {
-            setData( response.data );
-            setLoading( false );
+    const { data: products = [], isPending: loading, refetch }
+        = useQuery( {
+            queryKey: [ 'product' ],
+            queryFn: async () => {
+                const res = await axiosPublic.get( `${api}` );
+                setData( res.data );
+            }
         } )
-        .catch( ( error ) => {
-            console.log( error );
-        } );
 
     if ( data.length === 0 ) {
         return (

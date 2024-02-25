@@ -136,6 +136,38 @@ app.delete( '/api/device/:id', ( req, res ) => {
     } );
 } );
 
+app.get( '/api/machines', ( req, res ) => {
+    connection.query( 'SELECT * FROM machines', ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error retrieving data from database' );
+            return;
+        }
+        res.json( results );
+    } );
+} );
+
+app.post( '/api/machines', ( req, res ) => {
+    const machines = req.body;
+    connection.query( 'INSERT INTO machines SET ?', [ machines ], ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( err );
+            return;
+        }
+        res.status( 200 ).send( 'Product added' );
+    }
+    );
+} );
+
+app.delete( '/api/machines/:id', ( req, res ) => {
+    connection.query( 'DELETE FROM machines WHERE id = ?', [ req.params.id ], ( err ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error deleting machine' );
+            return;
+        }
+        res.status( 200 ).send( 'Machine deleted' );
+    } );
+} );
+
 app.listen( port, () => {
     console.log( `Server is running on port ${port}` );
 } );

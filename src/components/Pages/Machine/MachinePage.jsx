@@ -5,8 +5,8 @@ import PublicProduct from '../../../hooks/PublicProduct';
 const MachinePage = () => {
     return (
         <div>
-            <Header titel={ 'Machine' } />
-            <PublicProduct api={ '/machines' } />
+            <Header titel='Machine' />
+            <PublicProduct api='/machines' />
         </div>
     );
 };

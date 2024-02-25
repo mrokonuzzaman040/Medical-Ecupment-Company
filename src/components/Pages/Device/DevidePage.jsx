@@ -7,7 +7,7 @@ const DevidePage = () => {
     return (
         <div className='w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto'>
             <Header titel="Device" />
-            <PublicProduct api="/reagents" />
+            <PublicProduct api="/device" />
         </div>
     );
 };
