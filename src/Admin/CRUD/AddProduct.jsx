@@ -31,38 +31,33 @@ const AddProduct = () => {
             .then( ( response ) => {
                 const message = window.confirm( 'Product added successfully' );
             } )
-
-
         e.target.reset();
     };
     return (
         <div>
-            <div className="">
+            <div className="text-center">
                 <h1 className="text-2xl font-semibold text-gray-900">Add Product</h1>
             </div>
-            <div className="">
+            <div className="mt-10 mb-10">
                 <form onSubmit={ addProduct }>
-                    <div className="">
-                        <label htmlFor="catagory" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">catagory</label>
-                        <input type="text" name="catagory" id="catagory" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
+                    <div className="grid lg:grid-cols-5 sm:grid-cols-2 gap-4">
+                        <div className="relative bg-inherit">
+                            <input type="text" id="catagory" name="catagory" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="catagory" /><label htmlFor="catagory" className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">catagory</label>
+                        </div>
+                        <div className="relative bg-inherit">
+                            <input type="text" id="name" name="name" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="name" /><label htmlFor="name" className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">name</label>
+                        </div>
+                        <div className="relative bg-inherit">
+                            <input type="text" id="packSize" name="packSize" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="packSize" /><label htmlFor="packSize" className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">packSize</label>
+                        </div>
+                        <div className="relative bg-inherit">
+                            <input type="text" id="test" name="test" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="test" /><label htmlFor="test" className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">test</label>
+                        </div>
+                        <div className="relative bg-inherit">
+                            <input type="text" id="brand" name="brand" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-200 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="Brand" /><label htmlFor="brand" className="absolute cursor-text left-0 -top-3 text-sm text-gray-500 bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-500 peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all">Brand</label>
+                        </div>
                     </div>
-                    <div className="">
-                        <label htmlFor="name" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Name</label>
-                        <input type="text" name="name" id="name" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                    </div>
-                    <div className="">
-                        <label htmlFor="packSize" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Package Size</label>
-                        <input type="text" name="packSize" id="packSize" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                    </div>
-                    <div className="">
-                        <label htmlFor="test" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Test</label>
-                        <input type="text" name="test" id="test" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                    </div>
-                    <div className="">
-                        <label htmlFor="brand" defaultValue={ "Null" } className="block text-sm font-medium text-gray-700">Brand</label>
-                        <input type="text" name="brand" id="brand" className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md" />
-                    </div>
-                    <div className="">
+                    <div className="mt-3 items-center flex ">
                         <button className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Add Product</button>
                     </div>
                 </form>

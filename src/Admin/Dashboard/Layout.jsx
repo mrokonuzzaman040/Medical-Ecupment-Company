@@ -10,10 +10,7 @@ const Layout = () => {
                         <Link to="/dashboard">Dashboard</Link>
                     </li>
                     <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
-                        <Link to="/dashboard/add-product">Products</Link>
-                    </li>
-                    <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
-                        <Link to="/dashboard/products">All Products</Link>
+                        <Link to="/dashboard/regent">Regent</Link>
                     </li>
                 </ul>
             </div>

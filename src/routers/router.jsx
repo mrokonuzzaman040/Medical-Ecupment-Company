@@ -65,15 +65,7 @@ const router = createBrowserRouter( [
                 element: <Layout />,
                 children: [
                     {
-                        path: 'add-product',
-                        element: <AddProduct />,
-                    },
-                    {
-                        path: 'edit-product',
-                        element: <EditProduct />,
-                    },
-                    {
-                        path: 'products',
+                        path: 'regent',
                         element: <AllProducts />,
                     },
                     {

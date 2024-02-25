@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import usePublicApi from '../../AxiosHandeler/usePublicApi';
 import { useQuery } from '@tanstack/react-query';
+import AddProduct from '../AddProduct';
 
 
 const AllProducts = () => {
@@ -46,6 +47,7 @@ const AllProducts = () => {
         <div className="flex flex-col">
             <div className="-m-1.5 overflow-x-auto">
                 <div className="p-1.5 min-w-full inline-block align-middle">
+                    <AddProduct />
                     <div className="overflow-hidden">
                         <table className="min-w-full divide-y divide-gray-200 dark:divide-gray-700">
                             <thead>
@@ -53,38 +55,38 @@ const AllProducts = () => {
                                     <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Id</th>
                                     <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Category</th>
                                     <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Name</th>
-                                    <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Package Size</th>
-                                    <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Test</th>
-                                    <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Brand</th>
-                                    <th scope="col" className="px-6 py-3 text-end text-xs font-medium text-gray-500 uppercase">Action</th>
+                                    <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Package Size</th>
+                                    <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Test</th>
+                                    <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Brand</th>
+                                    <th scope="col" className="px-6 py-3 text-start text-xs font-medium text-gray-500 uppercase">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                { products.map( ( product ) => (
+                                { products.map( ( product, index ) => (
                                     <tr key={ product.id }>
                                         <td className="px-6 py-4 whitespace-nowrap">
                                             <div className="flex items-center">
                                                 <div className="ml-4">
-                                                    <div className="text-sm font-medium text-gray-900">{ product.id }</div>
+                                                    <div className="text-sm font-medium text-gray-900">{ index + 1 }</div>
                                                 </div>
                                             </div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">{ product.catagory }</div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">{ product.name }</div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">{ product.packSize }</div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">{ product.test }</div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap">
                                             <div className="text-sm text-gray-900">{ product.brand }</div>
                                         </td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                                        <td className="text-start px-6 py-4 whitespace-nowrap text-sm font-medium">
                                             <button onClick={ () => deleteproduct( product.id ) } className="text-red-600 hover:text-red-900">Delete</button>
                                         </td>
                                     </tr>
