@@ -14,23 +14,23 @@ const PublicProduct = ( { api } ) => {
                 const res = await axiosPublic.get( `${api}` );
                 setData( res.data );
             }
-        } )
-
-    if ( data.length === 0 ) {
-        return (
-            <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
-                <div className="flex justify-center items-center h-96">
-                    <div className="text-2xl font-bold text-gray-900">No Data Found</div>
-                </div>
-            </div>
-        );
-    }
+        } );
 
     if ( loading ) {
         return (
             <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
                 <div className="flex justify-center items-center h-96">
                     <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-gray-900"></div>
+                </div>
+            </div>
+        );
+    }
+
+    if ( data.length === 0 ) {
+        return (
+            <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+                <div className="flex justify-center items-center h-96">
+                    <div className="text-2xl font-bold text-gray-900">No Data Found</div>
                 </div>
             </div>
         );
