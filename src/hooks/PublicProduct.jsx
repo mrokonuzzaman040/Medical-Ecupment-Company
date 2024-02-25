@@ -15,6 +15,16 @@ const PublicProduct = ( { api } ) => {
             console.log( error );
         } );
 
+    if ( data.length === 0 ) {
+        return (
+            <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
+                <div className="flex justify-center items-center h-96">
+                    <div className="text-2xl font-bold text-gray-900">No Data Found</div>
+                </div>
+            </div>
+        );
+    }
+
     if ( loading ) {
         return (
             <div className="w-full max-w-[85rem] py-10 px-4 sm:px-6 lg:px-8 mx-auto">
@@ -48,33 +58,33 @@ const PublicProduct = ( { api } ) => {
                                                 <tr key={ index } className="bg-white dark:bg-gray-800">
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        id }</div>
+                                                            // @ts-ignore
+                                                            id }</div>
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        catagory }</div>
+                                                            // @ts-ignore
+                                                            catagory }</div>
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        brand }</div>
+                                                            // @ts-ignore
+                                                            brand }</div>
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        name }</div>
+                                                            // @ts-ignore
+                                                            name }</div>
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        packSize }</div>
+                                                            // @ts-ignore
+                                                            packSize }</div>
                                                     </td>
                                                     <td className="px-6 py-4 whitespace-nowrap">
                                                         <div className="text-sm text-gray-900 dark:text-gray-200 text-left">{ reagent.
-// @ts-ignore
-                                                        test }</div>
+                                                            // @ts-ignore
+                                                            test }</div>
                                                     </td>
                                                 </tr>
                                             );

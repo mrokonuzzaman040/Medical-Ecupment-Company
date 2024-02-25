@@ -13,7 +13,6 @@ const AddProduct = ( { api } ) => {
         const test = e.target.test.value;
         const brand = e.target.brand.value;
 
-
         // check all the input fields
         if ( catagory === "" || name === "" || packSize === "" || test === "" || brand === "" ) {
             return alert( "Please fill all the fields" );
@@ -33,6 +32,8 @@ const AddProduct = ( { api } ) => {
             } )
         e.target.reset();
     };
+
+
     return (
         <div>
             <div className="text-center">

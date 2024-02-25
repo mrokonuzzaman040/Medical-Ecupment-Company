@@ -468,7 +468,29 @@ const config = {
             test: '100 Test',
             brand: 'GB, India'
         }
-    ]
+    ],
+
+    machineData: [
+        {
+            name: 'Machine 1',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Machine 2',
+            packSize: '2 x 100 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Machine 3',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        }
+    ],
+
 };
 
 export { config }

@@ -103,6 +103,39 @@ app.post( '/api/reagents', ( req, res ) => {
     } );
 } );
 
+app.get( '/api/device', ( req, res ) => {
+    connection.query( 'SELECT * FROM device', ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error retrieving data from database' );
+            console.log( err );
+            return;
+        }
+        res.json( results );
+    } );
+} );
+
+app.post( '/api/device', ( req, res ) => {
+    const device = req.body;
+    connection.query( 'INSERT INTO device SET ?', [ device ], ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( err );
+            return;
+        }
+        res.status( 200 ).send( 'Product added' );
+    } );
+} );
+
+app.delete( '/api/device/:id', ( req, res ) => {
+    connection.query( 'DELETE FROM device WHERE id = ?', [ req.params.id ], ( err ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error deleting device' );
+            console.log( err );
+            return;
+        }
+        res.status( 200 ).send( 'Device deleted' );
+    } );
+} );
+
 app.listen( port, () => {
     console.log( `Server is running on port ${port}` );
 } );

@@ -8,5 +8,13 @@ CREATE TABLE reagents (
     test TEXT,
     brand TEXT
 );
-```
 
+--  create device table 
+CREATE TABLE devices (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    catagory TEXT,
+    name TEXT,
+    packSize TEXT,
+    test TEXT,
+    brand TEXT
+);

@@ -32,7 +32,7 @@ const ProductTable = ( { api } ) => {
         if ( confirmed ) {
             try {
                 // Make delete request to delete the product
-                await axiosPublic.delete( `/reagents/${id}` );
+                await axiosPublic.delete( `${api}/${id}` );
                 // Refetch the data to update the product list
                 refetch();
             } catch ( error ) {
@@ -40,7 +40,6 @@ const ProductTable = ( { api } ) => {
             }
         }
     };
-
 
     return (
         <div className="overflow-hidden">
