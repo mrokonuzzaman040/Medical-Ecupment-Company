@@ -3,32 +3,21 @@ import { Link, Outlet } from 'react-router-dom';
 
 const Layout = () => {
     return (
-        <div className="flex -mt-5">
-            <div className="bg-slate-400 w-80 py-5 h-screen rounded-r-lg ">
-                <div className='flex flex-col'>
-                    <div className="">
-                        <ul className='flex flex-col gap-10'>
-                            <li>
-                                <Link className='bg-gray-600 p-4 rounded-md font-thin text-base' to="/dashboard">Dashboard</Link>
-                            </li>
-                            <li>
-                                <Link className='bg-gray-600 p-4 rounded-md font-thin text-base' to="/dashboard/products">Products</Link>
-                            </li>
-                            <li>
-                                <Link className='bg-gray-600 p-4 rounded-md font-thin text-base' to="/dashboard/add-product">Add Product</Link>
-                            </li>
-                        </ul>
-                    </div>
-                    <div className="flex">
-                        <ul>
-                            <li>
-                                <button>Logout</button>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div className="flex mt-5 gap-5">
+            <div className="bg-white w-80 py-5 h-screen rounded-r-lg ">
+                <ul className="flex flex-col gap-5 px-5">
+                    <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
+                        <Link to="/dashboard">Dashboard</Link>
+                    </li>
+                    <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
+                        <Link to="/dashboard/add-product">Products</Link>
+                    </li>
+                    <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
+                        <Link to="/dashboard/products">All Products</Link>
+                    </li>
+                </ul>
             </div>
-            <div className="w-full">
+            <div className="w-full h-screen bg-slate-300 p-10 rounded-xl">
                 <Outlet />
             </div>
         </div>
