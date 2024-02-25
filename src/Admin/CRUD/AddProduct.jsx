@@ -1,7 +1,7 @@
 import React from 'react';
 import usePublicApi from '../AxiosHandeler/usePublicApi';
 
-const AddProduct = () => {
+const AddProduct = ( { api } ) => {
 
     const axiosPublic = usePublicApi();
 
@@ -27,7 +27,7 @@ const AddProduct = () => {
             brand
         };
 
-        axiosPublic.post( '/reagents', product )
+        axiosPublic.post( `${api}`, product )
             .then( ( response ) => {
                 const message = window.confirm( 'Product added successfully' );
             } )

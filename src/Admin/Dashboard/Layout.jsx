@@ -12,6 +12,9 @@ const Layout = () => {
                     <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
                         <Link to="/dashboard/regent">Regent</Link>
                     </li>
+                    <li className='px-4 py-2 border-b-4 border-green-500 text-green-500 hover:text-white hover:bg-green-500 transition-all duration-200'>
+                        <Link to="/dashboard/device">Devices</Link>
+                    </li>
                 </ul>
             </div>
             <div className="w-full h-screen bg-slate-300 p-10 rounded-xl">

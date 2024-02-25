@@ -54,28 +54,17 @@ const Navbar = () => {
                                             <div className="md:col-span-3">
                                                 <div className="flex flex-col py-6 px-3 md:px-6">
                                                     <div className="space-y-4">
-                                                        <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">Support</span>
+                                                        <span className="mb-2 text-xs font-semibold uppercase text-gray-800 dark:text-gray-200">Device & Strips</span>
 
-                                                        <a className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                                                            <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
-                                                            <div className="grow">
-                                                                <p>Help Center</p>
-                                                            </div>
-                                                        </a>
+                                                        { config.deviceandstripe.map( ( product, index ) => (
+                                                            <Link className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" to={ `/device/${product.name}` }>
+                                                                <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
+                                                                <div className="grow">
+                                                                    <p>{ product.name }</p>
+                                                                </div>
+                                                            </Link>
+                                                        ) ) }
 
-                                                        <a className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                                                            <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4" /><path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" /></svg>
-                                                            <div className="grow">
-                                                                <p>Developer Hub</p>
-                                                            </div>
-                                                        </a>
-
-                                                        <a className="flex gap-x-4 text-gray-800 hover:text-blue-600 dark:text-gray-200 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                                                            <svg className="flex-shrink-0 size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" ><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M22 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                                                            <div className="grow">
-                                                                <p>Community Forum</p>
-                                                            </div>
-                                                        </a>
                                                     </div>
 
                                                     <div className="mt-7 space-y-4">

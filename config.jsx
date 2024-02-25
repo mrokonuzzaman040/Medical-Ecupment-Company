@@ -448,6 +448,27 @@ const config = {
             brand: 'GB, India'
         }
     ],
+
+    deviceandstripe: [
+        {
+            name: 'Device 1',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Device 2',
+            packSize: '2 x 100 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        },
+        {
+            name: 'Device 3',
+            packSize: '2 x 50 ml',
+            test: '100 Test',
+            brand: 'GB, India'
+        }
+    ]
 };
 
 export { config }

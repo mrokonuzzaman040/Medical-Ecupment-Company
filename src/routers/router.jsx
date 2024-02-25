@@ -15,6 +15,7 @@ import Layout from "../Admin/Dashboard/Layout";
 import AddProduct from "../Admin/CRUD/AddProduct";
 import EditProduct from "../Admin/CRUD/EditProduct";
 import AllProducts from "../Admin/CRUD/Products/AllProducts";
+import DevidePage from "../components/Pages/Device/DevidePage";
 
 const router = createBrowserRouter( [
     {
@@ -57,6 +58,10 @@ const router = createBrowserRouter( [
                 element: <ProductsCategory />,
             },
             {
+                path: "/device/:id",
+                element: <DevidePage />,
+            },
+            {
                 path: 'dashboard',
                 element: <Layout />,
                 children: [
@@ -67,6 +72,10 @@ const router = createBrowserRouter( [
                     {
                         path: 'error',
                         element: <Error />,
+                    },
+                    {
+                        path: 'device',
+                        element: <DevidePage />,
                     },
                 ],
             }
