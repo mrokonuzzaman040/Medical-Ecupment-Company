@@ -103,16 +103,6 @@ app.post( '/api/reagents', ( req, res ) => {
     } );
 } );
 
-// Close the connection
-// connection.end( ( err ) => {
-//     if ( err ) {
-//         console.error( 'Error closing MySQL connection:', err );
-//         return;
-//     }
-//     console.log( 'MySQL connection closed!' );
-// } );
-
-
 app.listen( port, () => {
     console.log( `Server is running on port ${port}` );
 } );
