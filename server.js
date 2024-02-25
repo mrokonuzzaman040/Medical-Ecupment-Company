@@ -2,8 +2,11 @@ import express from 'express';
 import mysql from 'mysql2';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import multer from 'multer';
+const upload = multer( { dest: 'uploads/' } )
 dotenv.config();
 
+// Create a connection
 const port = process.env.SERVER_PORT || 5000;
 
 
@@ -166,6 +169,35 @@ app.delete( '/api/machines/:id', ( req, res ) => {
         }
         res.status( 200 ).send( 'Machine deleted' );
     } );
+} );
+
+// Add Machine with name, details, brand, model, Manufacture and image, image will upload in local storate
+app.get( '/api/machines', ( req, res ) => {
+    connection.query( 'SELECT * FROM machines', ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( 'Error retrieving data from database' );
+            return;
+        }
+        res.json( results );
+    } );
+} );
+
+app.post( '/api/addMachine', ( req, res ) => {
+    const machine = req.body;
+    connection.query( 'INSERT INTO machines SET ?', [ machine ], ( err, results ) => {
+        if ( err ) {
+            res.status( 500 ).send( err );
+            console.log( err );
+            return;
+        }
+        res.status( 200 ).send( 'Machine added' );
+        console.log( machine );
+    } );
+} );
+
+app.post( '/api/uploadImage', upload.single( 'image' ), ( req, res ) => {
+    res.status( 200 ).send( 'Image uploaded' );
+    console.log( req.file );
 } );
 
 app.listen( port, () => {

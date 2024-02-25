@@ -18,6 +18,7 @@ import AllProducts from "../Admin/CRUD/Products/AllProducts";
 import DevidePage from "../components/Pages/Device/DevidePage";
 import MachinePage from "../components/Pages/Machine/MachinePage";
 import AdminDevice from "../Admin/Dashboard/AdminDevice";
+import AdminMachine from "../Admin/Dashboard/AdminMachine";
 
 const router = createBrowserRouter( [
     {
@@ -83,6 +84,10 @@ const router = createBrowserRouter( [
                         path: 'device',
                         element: <AdminDevice />,
                     },
+                    {
+                        path: 'machine',
+                        element: <AdminMachine />,
+                    }
                 ],
             }
         ],
