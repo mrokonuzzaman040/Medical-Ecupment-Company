@@ -68,33 +68,33 @@ const router = createBrowserRouter( [
                 path: "/machine/:id",
                 element: <MachinePage />,
             },
-            {
-                path: 'dashboard',
-                element: <Layout />,
-                children: [
-                    {
-                        path: 'regent',
-                        element: <AllProducts />,
-                    },
-                    {
-                        path: 'error',
-                        element: <Error />,
-                    },
-                    {
-                        path: 'device',
-                        element: <AdminDevice />,
-                    },
-                    {
-                        path: 'machine',
-                        element: <AdminMachine />,
-                    }
-                ],
-            }
         ],
     },
     {
         path: "*",
         element: <Error />,
+    },
+    {
+        path: '/dashboard',
+        element: <Layout />,
+        children: [
+            {
+                path: 'regent',
+                element: <AllProducts />,
+            },
+            {
+                path: 'error',
+                element: <Error />,
+            },
+            {
+                path: 'device',
+                element: <AdminDevice />,
+            },
+            {
+                path: 'machine',
+                element: <AdminMachine />,
+            }
+        ],
     },
 
 ] );
