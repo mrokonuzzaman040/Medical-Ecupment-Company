@@ -1,5 +1,5 @@
-import { createContext, useEffect, useState } from "react";
-import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
+import React, { createContext, useEffect, useState } from "react";
+import { GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from "firebase/auth";
 
 import { app } from './firebase';
 import useAxiosPublic from '../Hooks/useAxiosPublic';
@@ -13,8 +13,6 @@ const auth = getAuth( app );
 const AuthProvider = ( { children } ) => {
     const [ user, setUser ] = useState( null );
     const [ loading, setLoading ] = useState( true );
-    const googleProvider = new GoogleAuthProvider();
-    const axiosPublic = useAxiosPublic();
 
     const createUser = ( email, password ) => {
         setLoading( true );
@@ -26,24 +24,16 @@ const AuthProvider = ( { children } ) => {
         return signInWithEmailAndPassword( auth, email, password );
     }
 
-    const googleSignIn = () => {
-        setLoading( true );
-        return signInWithPopup( auth, googleProvider );
-    }
-
     const logOut = () => {
         setLoading( true );
         return signOut( auth );
     }
 
-    const updateUserProfile = ( name, photo ) => {
-        return updateProfile( auth.currentUser, {
-            displayName: name, photoURL: photo
-        } );
-    }
+    const axiosPublic = useAxiosPublic();
 
     useEffect( () => {
         const unsubscribe = onAuthStateChanged( auth, currentUser => {
+            // @ts-ignore
             setUser( currentUser );
             if ( currentUser ) {
                 // get token and store client
@@ -73,9 +63,7 @@ const AuthProvider = ( { children } ) => {
         loading,
         createUser,
         signIn,
-        googleSignIn,
         logOut,
-        updateUserProfile
     }
 
     return (

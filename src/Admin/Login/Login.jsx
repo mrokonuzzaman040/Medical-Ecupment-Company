@@ -1,15 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { loadCaptchaEnginge, LoadCanvasTemplate, validateCaptcha } from 'react-simple-captcha';
-import { Link } from 'react-router-dom';
-
 
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../Auth/AuthProvider';
 
 const Login = () => {
-
-    const [ disabled, setDisabled ] = useState( true );
+    const [ disabled, setDisabled ] = useState( false );
+    // @ts-ignore
     const { signIn } = useContext( AuthContext );
     const navigate = useNavigate();
     const location = useLocation();
@@ -73,9 +71,6 @@ const Login = () => {
                                     <span className="label-text">Password</span>
                                 </label>
                                 <input type="password" name="password" placeholder="password" className="input input-bordered" />
-                                <label className="label">
-                                    <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                                </label>
                             </div>
                             <div className="form-control">
                                 <label className="label">
@@ -85,11 +80,9 @@ const Login = () => {
 
                             </div>
                             <div className="form-control mt-6">
-                                {/* TODO: apply disabled for re captcha */ }
                                 <input className="btn btn-primary" type="submit" value="Login" />
                             </div>
                         </form>
-                        <p className='px-6'><small>New Here? <Link to="/register">Create an account</Link> </small></p>
                     </div>
                 </div>
             </div>

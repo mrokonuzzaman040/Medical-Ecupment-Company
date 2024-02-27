@@ -17,9 +17,6 @@ import ConsumableAccessories from "../ProductDetails/ConsumableAccessories";
 import Layout from "../Admin/Dashboard/Layout";
 import PrivateRoute from "./PrivateRoute";
 import Login from "../Admin/Login/Login";
-import Register from "../Admin/Login/Register";
-
-
 
 const router = createBrowserRouter( [
     {
@@ -74,16 +71,12 @@ const router = createBrowserRouter( [
                 path: '/login',
                 element: <Login />,
             },
-            {
-                path: '/register',
-                element: <Register />,
-            },
 
         ],
     },
     {
         path: 'dashboard',
-        element: <Layout />,
+        element: <PrivateRoute> <Layout /> </PrivateRoute>,
     }
 ] );
 
