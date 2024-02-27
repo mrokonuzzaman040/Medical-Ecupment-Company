@@ -2,6 +2,9 @@ import React, { useRef, useState } from 'react';
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
+import dotenv from 'dotenv';
+dotenv.config();
 
 const Contact = () => {
     const formRef = useRef( null );
@@ -9,7 +12,9 @@ const Contact = () => {
     const [ form, setForm ] = useState( {
         name: '',
         email: '',
+        phone: '',
         message: ''
+
     } );
 
     const handleChange = ( e ) => {
@@ -42,13 +47,23 @@ const Contact = () => {
             .then(
                 () => {
                     setLoading( false );
-                    // alert("Thank you. I will get back to you as soon as possible.");
-                    toast.success( "Thank you. I will get back to you as soon as possible." );
+                    Swal.fire( {
+                        title: 'Message Sent!',
+                        text: 'We will get back to you as soon as possible.',
+                        icon: 'success',
+                        showClass: {
+                            popup: 'animate__animated animate__fadeInDown'
+                        },
+                        hideClass: {
+                            popup: 'animate__animated animate__fadeOutUp'
+                        }
+                    } );
 
                     setForm( {
                         name: "",
                         email: "",
                         message: "",
+                        phone: "",
                     } );
                 },
                 // @ts-ignore
@@ -121,6 +136,17 @@ const Contact = () => {
                                     value={ form.email }
                                     onChange={ handleChange }
                                     placeholder="What's your email?"
+                                    className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
+                                />
+                            </label>
+                            <label className='flex flex-col'>
+                                <span className='text-black font-medium mb-4'>Your Phone</span>
+                                <input
+                                    type='phone'
+                                    name='phone'
+                                    value={ form.phone }
+                                    onChange={ handleChange }
+                                    placeholder="Enter Your Phone Number"
                                     className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
                                 />
                             </label>
