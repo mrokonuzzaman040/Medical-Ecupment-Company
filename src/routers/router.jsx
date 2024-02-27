@@ -1,24 +1,21 @@
 import * as React from "react";
-import { config } from "../../config";
 import {
     createBrowserRouter,
 } from "react-router-dom";
 import App from "../App";
-import Ourclients from "../webcomponents/Ourclients";
-import Ourbranchs from "../webcomponents/Ourbranchs";
-import Contact from "../webcomponents/Contact";
-import Root from "../webcomponents/Root";
-import Error from "../components/Error/Error";
-import ProductsDetails from "../components/ProductsDetails/ProductsDetails";
-import ProductsCategory from "../components/ProductsCategory/ProductsCategory";
-import Layout from "../Admin/Dashboard/Layout";
-import AddProduct from "../Admin/CRUD/AddProduct";
-import EditProduct from "../Admin/CRUD/EditProduct";
-import AllProducts from "../Admin/CRUD/Products/AllProducts";
-import DevidePage from "../components/Pages/Device/DevidePage";
-import MachinePage from "../components/Pages/Machine/MachinePage";
-import AdminDevice from "../Admin/Dashboard/AdminDevice";
-import AdminMachine from "../Admin/Dashboard/AdminMachine";
+import HomeLayout from "../Home/HomeLayout";
+import About from "../Home/About/About";
+import Contact from "../Home/Contact/Contact";
+import OurClients from "../Home/Clients/OurClients";
+import ErrorPage from "../Error/ErrorPage";
+import MachineDetails from "../MachineDetails/MachineDetails";
+import BiochemistryReagents from "../ProductDetails/BiochemistryReagents";
+import SerologyReagents from "../ProductDetails/SerologyReagents";
+import ELISAReagents from "../ProductDetails/ELISAReagents";
+import DeviceStrips from "../ProductDetails/DeviceStrips";
+import ConsumableAccessories from "../ProductDetails/ConsumableAccessories";
+
+
 
 const router = createBrowserRouter( [
     {
@@ -27,76 +24,51 @@ const router = createBrowserRouter( [
         children: [
             {
                 path: "/",
-                element: <Root />,
+                element: <HomeLayout />,
             },
             {
-                path: "/ourclients",
-                element: <Ourclients />,
-            },
-            {
-                path: "/branches",
-                element: <Ourbranchs />,
+                path: "/about",
+                element: <About />,
             },
             {
                 path: "/contact",
                 element: <Contact />,
             },
-            // Error page
+            {
+                path: "/clients",
+                element: <OurClients />,
+            },
             {
                 path: "*",
-                element: <Error />,
+                element: <ErrorPage />,
             },
-            // Product page
             {
                 path: "/product/:id",
-                element: <ProductsDetails />,
-                loader: async ( { params } ) => {
-                    const product = config.productsContent.find( ( item ) => item.button.link === params.id );
-                    return product;
-                },
-            },
-            // Product category page
-            {
-                path: "/product-category/:category",
-                element: <ProductsCategory />,
+                element: <MachineDetails />,
             },
             {
-                path: "/device/:id",
-                element: <DevidePage />,
+                path: "/biochemistryreagents",
+                element: <BiochemistryReagents />,
             },
             {
-                path: "/machine/:id",
-                element: <MachinePage />,
-            },
-        ],
-    },
-    {
-        path: "*",
-        element: <Error />,
-    },
-    {
-        path: '/dashboard',
-        element: <Layout />,
-        children: [
-            {
-                path: 'regent',
-                element: <AllProducts />,
+                path: "/serologyreagents",
+                element: <SerologyReagents />,
             },
             {
-                path: 'error',
-                element: <Error />,
+                path: "/elisareagents",
+                element: <ELISAReagents />,
             },
             {
-                path: 'device',
-                element: <AdminDevice />,
+                path: "/deviceandstrips",
+                element: <DeviceStrips />,
             },
             {
-                path: 'machine',
-                element: <AdminMachine />,
+                path: "/consumableandaccessories",
+                element: <ConsumableAccessories />,
             }
+
         ],
     },
-
 ] );
 
 export default router;

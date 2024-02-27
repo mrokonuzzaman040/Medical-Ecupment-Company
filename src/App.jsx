@@ -1,11 +1,11 @@
 import React from 'react';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
+import Navbar from './Home/Common/Navbar/Navbar';
 import { Outlet } from 'react-router-dom';
+import Footer from './Home/Common/Footer/Footer';
 
 const App = () => {
   return (
-    <div>
+    <div className=''>
       <Navbar />
       <Outlet />
       <Footer />
