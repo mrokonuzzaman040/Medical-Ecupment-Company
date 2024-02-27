@@ -77,6 +77,32 @@ const router = createBrowserRouter( [
     {
         path: 'dashboard',
         element: <PrivateRoute> <Layout /> </PrivateRoute>,
+        children: [
+            {
+                path: 'biochemistryreagents',
+                element: <BiochemistryReagents />,
+            },
+            {
+                path: 'serologyreagents',
+                element: <SerologyReagents />,
+            },
+            {
+                path: 'elisareagents',
+                element: <ELISAReagents />,
+            },
+            {
+                path: 'deviceandstrips',
+                element: <DeviceStrips />,
+            },
+            {
+                path: 'consumableandaccessories',
+                element: <ConsumableAccessories />,
+            },
+            {
+                path: '*',
+                element: <ErrorPage />,
+            },
+        ]
     }
 ] );
 

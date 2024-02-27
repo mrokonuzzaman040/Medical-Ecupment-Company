@@ -67,7 +67,9 @@ const AuthProvider = ( { children } ) => {
     }
 
     return (
-        <AuthContext.Provider value={ authInfo }>
+        <AuthContext.Provider
+            // @ts-ignore
+            value={ authInfo }>
             { children }
         </AuthContext.Provider>
     );
