@@ -3,8 +3,7 @@ import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Swal from 'sweetalert2';
-import dotenv from 'dotenv';
-dotenv.config();
+
 
 const Contact = () => {
     const formRef = useRef( null );
@@ -33,16 +32,16 @@ const Contact = () => {
 
         emailjs
             .send(
-                process.env.VITE_APP_EMAILJS_SERVICE_ID || "",
-                process.env.VITE_APP_EMAILJS_TEMPLATE_ID || "",
+                process.env.VITE_APP_EMAILJS_SERVICE_ID || "service_6i7zgf7",
+                process.env.VITE_APP_EMAILJS_TEMPLATE_ID || "template_kkx2xmu",
                 {
                     from_name: form.name,
                     to_name: "PortfolioSite",
                     from_email: form.email,
                     to_email: "rjrupom221@gmail.com",
-                    message: form.message,
+                    message: form.message + " " + "Phone" + form.phone,
                 },
-                process.env.VITE_APP_EMAILJS_PUBLIC_KEY,
+                process.env.VITE_APP_EMAILJS_PUBLIC_KEY || "obBXSzF7i8djO5ejq",
             )
             .then(
                 () => {
