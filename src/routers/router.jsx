@@ -14,6 +14,10 @@ import SerologyReagents from "../ProductDetails/SerologyReagents";
 import ELISAReagents from "../ProductDetails/ELISAReagents";
 import DeviceStrips from "../ProductDetails/DeviceStrips";
 import ConsumableAccessories from "../ProductDetails/ConsumableAccessories";
+import Layout from "../Admin/Dashboard/Layout";
+import PrivateRoute from "./PrivateRoute";
+import Login from "../Admin/Login/Login";
+import Register from "../Admin/Login/Register";
 
 
 
@@ -65,10 +69,22 @@ const router = createBrowserRouter( [
             {
                 path: "/consumableandaccessories",
                 element: <ConsumableAccessories />,
-            }
+            },
+            {
+                path: '/login',
+                element: <Login />,
+            },
+            {
+                path: '/register',
+                element: <Register />,
+            },
 
         ],
     },
+    {
+        path: 'dashboard',
+        element: <Layout />,
+    }
 ] );
 
 export default router;
