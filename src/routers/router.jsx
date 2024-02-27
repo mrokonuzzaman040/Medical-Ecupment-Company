@@ -17,6 +17,12 @@ import ConsumableAccessories from "../ProductDetails/ConsumableAccessories";
 import Layout from "../Admin/Dashboard/Layout";
 import PrivateRoute from "./PrivateRoute";
 import Login from "../Admin/Login/Login";
+import BioReagent from "../Admin/Dashboard/Home/Products/BioReagent";
+import SerReagent from "../Admin/Dashboard/Home/Products/SerReagent";
+import ElsReagnt from "../Admin/Dashboard/Home/Products/ElsReagnt";
+import Device from "../Admin/Dashboard/Home/Products/Device";
+import CoaDevice from "../Admin/Dashboard/Home/Products/CoaDevice";
+import MacDevice from "../Admin/Dashboard/Home/Products/MacDevice";
 
 const router = createBrowserRouter( [
     {
@@ -80,23 +86,27 @@ const router = createBrowserRouter( [
         children: [
             {
                 path: 'biochemistryreagents',
-                element: <BiochemistryReagents />,
+                element: <BioReagent />,
             },
             {
                 path: 'serologyreagents',
-                element: <SerologyReagents />,
+                element: <SerReagent />,
             },
             {
                 path: 'elisareagents',
-                element: <ELISAReagents />,
+                element: <ElsReagnt />,
             },
             {
                 path: 'deviceandstrips',
-                element: <DeviceStrips />,
+                element: <Device />,
             },
             {
                 path: 'consumableandaccessories',
-                element: <ConsumableAccessories />,
+                element: <CoaDevice />,
+            },
+            {
+                path: 'machine',
+                element: <MacDevice />,
             },
             {
                 path: '*',

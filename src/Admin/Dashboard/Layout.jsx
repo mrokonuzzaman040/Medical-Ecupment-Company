@@ -24,7 +24,9 @@ const Layout = () => {
                     <div className="flex items-center justify-center h-16 bg-gray-900 text-white">
                         <h1 className="text-2xl">Content</h1>
                     </div>
-                    <Outlet />
+                    <div className="p-4 items-center justify-end flex flex-col">
+                        <Outlet />
+                    </div>
                 </div>
             </div>
 
