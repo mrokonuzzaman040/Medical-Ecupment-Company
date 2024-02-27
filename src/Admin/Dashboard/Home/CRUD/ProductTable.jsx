@@ -16,9 +16,7 @@ const ProductTable = ( { api } ) => {
                 const res = await axiosPublic.get( `${api}` );
                 return res.data;
             }
-        } )
-
-    console.log( product );
+        } );
 
     if ( loading ) {
         return <>
@@ -68,8 +66,6 @@ const ProductTable = ( { api } ) => {
         }
         )
     };
-
-    refetch();
 
     return (
         <div>
