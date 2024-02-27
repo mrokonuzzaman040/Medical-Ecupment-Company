@@ -7,8 +7,8 @@ const CoaDevice = () => {
     return (
         <div>
             <Header product='Consumable & Accessories' />
-            <AddProduct api={ '' } />
-            <ProductTable api={ '' } />
+            <AddProduct api={ 'coadevice' } />
+            <ProductTable api={ 'coadevice' } />
         </div>
     );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MachineTable = () => {
+const MachineTable = ( { api } ) => {
     return (
         <div>
 

@@ -7,8 +7,8 @@ const SerReagent = () => {
     return (
         <div>
             <Header product='Serology Reagents' />
-            <AddProduct api={ '' } />
-            <ProductTable api={ '' } />
+            <AddProduct api={ 'serreagent' } />
+            <ProductTable api={ 'serreagent' } />
         </div>
     );
 };

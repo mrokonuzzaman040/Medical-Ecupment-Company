@@ -4,6 +4,9 @@ import { useQuery } from '@tanstack/react-query';
 import usePublicApi from '../../../../Hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
 
+import { IoReload } from "react-icons/io5";
+
+
 const ProductTable = ( { api } ) => {
     const axiosPublic = usePublicApi();
     const { data: product = [], isPending: loading, refetch }
@@ -14,6 +17,8 @@ const ProductTable = ( { api } ) => {
                 return res.data;
             }
         } )
+
+    console.log( product );
 
     if ( loading ) {
         return <>
@@ -64,47 +69,87 @@ const ProductTable = ( { api } ) => {
         )
     };
 
+    refetch();
+
     return (
         <div>
             <div className="overflow-x-auto ">
-                <table className="table table-xs">
+                <div className="flex justify-end mb-4">
+                    <button onClick={ () => refetch() } className="bg-blue-500 flex items-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <span className='mr-2'><IoReload /> </span>Reload
+                    </button>
+                </div>
+                <table className="table table-xs w-full">
                     <thead>
-                        <tr>
-                            <th></th>
-                            <th>Reagent Name</th>
-                            <th>Pack Size</th>
-                            <th>Test</th>
-                            <th>Brand</th>
-                            <th>Action</th>
+                        <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+                            <th className="px-4 py-3">Id</th>
+                            <th className="px-4 py-3">Name</th>
+                            <th className="px-4 py-3">Pack Size</th>
+                            <th className="px-4 py-3">Test</th>
+                            <th className="px-4 py-3">Brand</th>
+                            <th className="px-4 py-3">Action</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <th>{ product.id }</th>
-                            <td>{ product.name }</td>
-                            <td>{ product.pksize }</td>
-                            <td>{ product.test }</td>
-                            <td>{ product.brand }</td>
-                            <td>
-                                <button onClick={ () => deleteproduct( product.id ) } className="btn btn-danger">
-                                    <MdOutlineDeleteOutline />
-                                </button>
-                            </td>
-                        </tr>
+                    <tbody className='bg-white'>
+                        {
+                            product.map( ( product ) => (
+                                <tr className="text-gray-700" key={ product.id }>
+                                    <td className="px-4 py-3 text-sm border">{ product.id }</td>
+                                    <td className="px-4 py-3 border">
+                                        <div className="flex items-center text-sm">
+                                            <p className="font-semibold text-black">{ product.name }</p>
+                                        </div>
+                                    </td>
+                                    <td className="px-4 py-3 text-ms font-semibold border">{ product.packSize }</td>
+                                    <td className="px-4 py-3 text-xs border">
+                                        <span className="px-2 py-1 font-semibold leading-tight text-green-700 bg-green-100 rounded-sm"> { product.test } </span>
+                                    </td>
+                                    <td className="px-4 py-3 text-sm border">{ product.brand }</td>
+                                    <td className="px-4 py-3 text-sm border">
+                                        <button onClick={ () => deleteproduct( product.id ) } className="text-red-600 text-xl  hover:text-red-900">
+                                            <MdOutlineDeleteOutline />
+                                        </button>
+                                    </td>
+                                </tr>
+                            ) )
+                        }
                     </tbody>
                     <tfoot>
-                        <tr>
-                            <th></th>
-                            <th>Reagent Name</th>
-                            <th>Pack Size</th>
-                            <th>Test</th>
-                            <th>Brand</th>
+                        <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+                            <th className="px-4 py-3">Id</th>
+                            <th className="px-4 py-3">Name</th>
+                            <th className="px-4 py-3">Pack Size</th>
+                            <th className="px-4 py-3">Test</th>
+                            <th className="px-4 py-3">Brand</th>
+                            <th className="px-4 py-3">Action</th>
                         </tr>
                     </tfoot>
                 </table>
             </div>
-        </div>
+        </div >
     );
 };
 
 export default ProductTable;
+
+
+
+<section className="container mx-auto p-6 font-mono">
+    <div className="w-full mb-8 overflow-hidden rounded-lg shadow-lg">
+        <div className="w-full overflow-x-auto">
+            <table className="w-full">
+                <thead>
+                    <tr className="text-md font-semibold tracking-wide text-left text-gray-900 bg-gray-100 uppercase border-b border-gray-600">
+                        <th className="px-4 py-3">Name</th>
+                        <th className="px-4 py-3">Age</th>
+                        <th className="px-4 py-3">Status</th>
+                        <th className="px-4 py-3">Date</th>
+                    </tr>
+                </thead>
+                <tbody className="bg-white">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>

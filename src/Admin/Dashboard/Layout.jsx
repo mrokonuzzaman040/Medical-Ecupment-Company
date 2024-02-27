@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Outlet } from 'react-router-dom';
+import { Link,NavLink, Outlet } from 'react-router-dom';
 
 const Layout = () => {
     return (
@@ -10,7 +10,7 @@ const Layout = () => {
                         <h1 className="text-2xl">Logo</h1>
                     </div>
                     <div className="flex flex-col items-left p-6 gap-5 h-16 bg-gray-800 text-white">
-                        <Link to={ '/dashboard' } className="hover:bg-gray-700 p-2 rounded">Dashboard</Link>
+                        <NavLink to={ '/dashboard' } className="hover:bg-gray-700 p-2 rounded">Dashboard</NavLink>
                         <Link to={ '/dashboard/biochemistryreagents' } className="hover:bg-gray-700 p-2 rounded">Biochemistry Reagents</Link>
                         <Link to={ '/dashboard/serologyreagents' } className="hover:bg-gray-700 p-2 rounded">Serology Reagents</Link>
                         <Link to={ '/dashboard/elisareagents' } className="hover:bg-gray-700 p-2 rounded">ELISA Reagents</Link>

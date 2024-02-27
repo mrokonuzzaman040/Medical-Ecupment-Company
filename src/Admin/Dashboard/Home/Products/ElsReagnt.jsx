@@ -7,8 +7,8 @@ const ElsReagnt = () => {
     return (
         <div>
             <Header product='ELISA Reagents' />
-            <AddProduct api={ '' } />
-            <ProductTable api={ '' } />
+            <AddProduct api={ 'elsreagnt' } />
+            <ProductTable api={ 'elsreagnt' } />
         </div>
     );
 };

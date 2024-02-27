@@ -7,8 +7,8 @@ const BioReagent = () => {
     return (
         <div>
             <Header product='Biochemistry Reagents' />
-            <AddProduct api={ '' } />
-            <ProductTable api={ '' } />
+            <AddProduct api={ 'bioreagent' } />
+            <ProductTable api={ 'bioreagent' } />
         </div>
     );
 };
