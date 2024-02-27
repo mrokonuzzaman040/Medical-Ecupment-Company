@@ -2,7 +2,6 @@ import React from 'react';
 
 const AddMachine = ( { api } ) => {
 
-    
     return (
         <>
             <div className="container">
