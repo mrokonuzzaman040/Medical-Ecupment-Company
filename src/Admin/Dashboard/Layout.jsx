@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet } from 'react-router-dom';
 import logo from './logo.png';
 
 const Layout = () => {
@@ -12,13 +12,12 @@ const Layout = () => {
                     </div>
                     <div className="flex flex-col items-left p-6 gap-5 h-16 bg-gray-800 text-white">
                         <NavLink to={ '/dashboard' } className="hover:bg-gray-700 p-2 rounded">Dashboard</NavLink>
-                        <Link to={ '/dashboard/biochemistryreagents' } className="hover:bg-gray-700 p-2 rounded">Biochemistry Reagents</Link>
-                        <Link to={ '/dashboard/serologyreagents' } className="hover:bg-gray-700 p-2 rounded">Serology Reagents</Link>
-                        <Link to={ '/dashboard/elisareagents' } className="hover:bg-gray-700 p-2 rounded">ELISA Reagents</Link>
-                        <Link to={ '/dashboard/deviceandstrips' } className="hover:bg-gray-700 p-2 rounded">Device & Strips</Link>
-                        <Link to={ '/dashboard/consumableandaccessories' } className="hover:bg-gray-700 p-2 rounded">Consumable & Accessories</Link>
-                        <Link to={ '/dashboard/machine' } className="hover:bg-gray-700 p-2 rounded">Machine</Link>
-
+                        <NavLink to={ '/dashboard/biochemistryreagents' } className="hover:bg-gray-700 p-2 rounded">Biochemistry Reagents</NavLink>
+                        <NavLink to={ '/dashboard/serologyreagents' } className="hover:bg-gray-700 p-2 rounded">Serology Reagents</NavLink>
+                        <NavLink to={ '/dashboard/elisareagents' } className="hover:bg-gray-700 p-2 rounded">ELISA Reagents</NavLink>
+                        <NavLink to={ '/dashboard/deviceandstrips' } className="hover:bg-gray-700 p-2 rounded">Device & Strips</NavLink>
+                        <NavLink to={ '/dashboard/consumableandaccessories' } className="hover:bg-gray-700 p-2 rounded">Consumable & Accessories</NavLink>
+                        <NavLink to={ '/dashboard/machine' } className="hover:bg-gray-700 p-2 rounded">Machine</NavLink>
                     </div>
                 </div>
                 <div className="flex-1">
