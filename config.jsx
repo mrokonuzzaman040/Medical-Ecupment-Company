@@ -4,7 +4,7 @@ import logo from './public/logo.png';
 const config = {
 
     site: {
-        titel: 'Khan Bio Tech',
+        titel: 'Khan Biotech',
         description: 'Khan Bio Tech is a leading supplier of reagents, equipment and consumables for laboratories and research centers.',
         images: '/site/logo.png',
         url: '/',
