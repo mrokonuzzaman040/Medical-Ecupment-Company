@@ -7,7 +7,7 @@ const MacDevice = () => {
     return (
         <div>
             <Header product='Machine' />
-            <AddMachine api={ '' } />
+            <AddMachine api={ '/upload/image' } />
             <MachineTable api={ '' } />
         </div>
     );
