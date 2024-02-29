@@ -5,7 +5,7 @@ import { config } from '../../../../config';
 
 const Navbar = () => {
     return (
-        <div className="navbar bg-green-700 ">
+        <div className="navbar bg-gray-200 ">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={ 0 } role="button" className="btn btn-ghost lg:hidden">
@@ -42,7 +42,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link to={ '/' } className="text-lg font-bold"><img className='lg:w-1/4 sm:w-1/2' src={ config.site.logo } alt="" /></Link>
+                <Link to={ '/' } className="text-lg font-bold"><img className='lg:w-1/3 sm:w-1/2' src={ config.site.logo } alt="" /></Link>
             </div>
             <div className="navbar-center hidden lg:flex text-gray-700">
                 <ul className="menu menu-horizontal px-1">
