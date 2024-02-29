@@ -66,12 +66,12 @@ const MachineTable = ( { api } ) => {
 
     return (
         <div>
-            <div className="flex justify-end mb-4">
-                <button onClick={ () => refetch() } className="bg-blue-500 flex items-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    <span className='mr-2'><IoReload /> </span>Reload
-                </button>
-            </div>
             <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+                <div className="flex justify-end mb-4">
+                    <button onClick={ () => refetch() } className="bg-blue-500 flex items-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                        <span className='mr-2'><IoReload /> </span>Reload
+                    </button>
+                </div>
                 <table className="w-full border-collapse bg-white text-left text-sm text-gray-500">
                     <thead className="bg-gray-50">
                         <tr>
