@@ -1,12 +1,12 @@
 import axios from 'axios';
 
-const axiosPublic = axios.create( {
+const axiosImageApi = axios.create( {
     baseURL: 'https://api.khanbiotech.com/upload',
 } );
 
-const usePublicApi = () => {
-    return axiosPublic;
+const useImageApi = () => {
+    return axiosImageApi;
 };
 
-export default usePublicApi;
+export default useImageApi;
 

@@ -5,10 +5,10 @@ import MachineTable from '../CRUD/MachineTable';
 
 const MacDevice = () => {
     return (
-        <div>
+        <div className='flex flex-col gap-3'>
             <Header product='Machine' />
-            <AddMachine api={ '/upload/image' } />
-            <MachineTable api={ '' } />
+            <AddMachine api={ '/machine' } />
+            <MachineTable api={ '/machine' } />
         </div>
     );
 };
