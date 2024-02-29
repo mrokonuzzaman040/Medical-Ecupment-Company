@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Machine = ( { name, model, brand, manufacturer, assembly, image } ) => {
+const Machine = ( { name, model, brand, manufacturer, assembly, image, pdf } ) => {
     return (
         <div className="font-[sans-serif] bg-white">
             <div className="p-6 lg:max-w-7xl max-w-4xl mx-auto">
@@ -23,7 +23,9 @@ const Machine = ( { name, model, brand, manufacturer, assembly, image } ) => {
                         </div>
 
                         <div className="flex flex-wrap gap-4 mt-10">
-                            <button type="button" className="min-w-[200px] px-4 py-3 bg-[#36e453] hover:bg-[#66c573] text-white text-sm font-bold rounded">Download Product Catalog</button>
+                            <a href={ pdf } download target="_blank">
+                                <button type="button" className="min-w-[200px] px-4 py-3 bg-[#36e453] hover:bg-[#66c573] text-white text-sm font-bold rounded">Download Product Catalog</button>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -52,6 +52,7 @@ const router = createBrowserRouter( [
             {
                 path: "/product/:id",
                 element: <MachineDetails />,
+                loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/machine/${params.id}` )
             },
             {
                 path: "/biochemistryreagents",
