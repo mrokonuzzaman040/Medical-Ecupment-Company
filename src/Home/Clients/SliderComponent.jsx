@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SliderComponent = ( { name, company, img } ) => {
+const SliderComponent = ( { name, company, img, degination } ) => {
     return (
         <div className="flex justify-center items-center lg:px-10 mt-20 px-4">
             <div className="w-full md:w-1/2 lg:w-1/3 hover:shadow-indigo-300 hover:shadow-lg rounded-lg border">

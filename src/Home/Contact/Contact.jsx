@@ -32,16 +32,16 @@ const Contact = () => {
 
         emailjs
             .send(
-                process.env.VITE_APP_EMAILJS_SERVICE_ID || "service_6i7zgf7",
-                process.env.VITE_APP_EMAILJS_TEMPLATE_ID || "template_kkx2xmu",
+                process.env.VITE_APP_EMAILJS_SERVICE_ID || "service_7hchbjm",
+                process.env.VITE_APP_EMAILJS_TEMPLATE_ID || "template_kqszb6p",
                 {
                     from_name: form.name,
-                    to_name: "PortfolioSite",
+                    to_name: "KhanBioTech",
                     from_email: form.email,
-                    to_email: "rjrupom221@gmail.com",
-                    message: form.message + " " + "Phone" + form.phone,
+                    to_email: "khanbiotech22@gmail.com",
+                    message: form.message + " " + "Phone: " + form.phone,
                 },
-                process.env.VITE_APP_EMAILJS_PUBLIC_KEY || "obBXSzF7i8djO5ejq",
+                process.env.VITE_APP_EMAILJS_PUBLIC_KEY || "oa50EUfsOPWHBPFgg",
             )
             .then(
                 () => {

@@ -43,7 +43,7 @@ const Cliens = () => {
                     className="mySwiper rounded-b-xl text-gray-700 overflow-hidden shadow-lg w-auto h-auto relative"
                 >
                     {
-                        config.ourClienst.map( ( item, index ) => (
+                        config.testimonials.map( ( item, index ) => (
                             <SwiperSlide key={ index }>
                                 <SliderComponent name={ item.name } company={ item.company } img={ item.image } />
                             </SwiperSlide>

@@ -21,7 +21,9 @@ if ( rootElement ) {
     <React.StrictMode>
       <AuthProvider>
         <QueryClientProvider client={ queryClient }>
-          <RouterProvider router={ router } />
+          <div className="bg-white">
+            <RouterProvider router={ router } />
+          </div>
         </QueryClientProvider>
       </AuthProvider>
     </React.StrictMode>

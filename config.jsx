@@ -142,41 +142,43 @@ const config = {
 
     testimonials: [
         {
-            name: 'John Doe',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech',
+            name: 'BRB Hospital Ltd.',
             degination: 'CEO',
-            rating: 3.5,
+            rating: 4.5,
             image: '/site/pic-1.jpg'
         },
         {
-            name: 'John Doe',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech',
+            name: 'DNA Solution Ltd',
             degination: 'CEO',
             rating: 4,
             image: '/site/pic-1.jpg'
         },
         {
-            name: 'John Doe',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech',
+            name: 'AICHI Hospital Ltd',
             degination: 'CEO',
             rating: 5,
             image: '/site/pic-1.jpg'
         },
         {
-            name: 'John Doe',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech',
+            name: 'Crystal Diagnostic Center',
             degination: 'CEO',
             rating: 3,
             image: '/site/pic-1.jpg'
         },
         {
-            name: 'John Doe',
-            review: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech',
+            name: 'Medi Path Diagnostic Center',
+            degination: 'CEO',
+            rating: 2,
+            image: '/site/pic-1.jpg'
+        },
+        {
+            name: 'Zabed Khan Surokkha Sergical',
+            degination: 'CEO',
+            rating: 2,
+            image: '/site/pic-1.jpg'
+        },
+        {
+            name: 'Advanced Diagnostic Center',
             degination: 'CEO',
             rating: 2,
             image: '/site/pic-1.jpg'
