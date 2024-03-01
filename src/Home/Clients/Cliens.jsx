@@ -45,7 +45,7 @@ const Cliens = () => {
                     {
                         config.ourClienst.map( ( item, index ) => (
                             <SwiperSlide key={ index }>
-                                <SliderComponent name={ item.name } company={ item.company } description={ item.description } />
+                                <SliderComponent name={ item.name } company={ item.company } img={ item.image } />
                             </SwiperSlide>
                         ) )
                     }

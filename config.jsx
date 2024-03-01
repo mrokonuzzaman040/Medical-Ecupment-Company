@@ -59,28 +59,36 @@ const config = {
 
     slidercontent: [
         {
-            title: 'Welcome to Khan Bio Tech',
+            title: 'Hematology Analyzer 5 Part, Dymind DF 50',
             button: {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/pic-1.jpg'
+            image: '/slider/slider-1.jpg'
         },
         {
-            title: 'Welcome to Khan Bio Tech',
+            title: 'Hematology Analyzer 3 Part, Rayto RT7600',
             button: {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/pic-1.jpg'
+            image: '/slider/slider-2.jpg'
         },
         {
-            title: 'Welcome to Khan Bio Tech',
+            title: 'Hematology Analyzer 3 Part, Promax 30',
             button: {
                 name: 'Get Started',
                 link: '/products'
             },
-            image: '/site/pic-1.jpg'
+            image: '/slider/slider-3.jpg'
+        },
+        {
+            title: 'Hematology Analyzer 3 Part, DYMIND DH 36',
+            image: '/slider/slider-4.jpg'
+        },
+        {
+            title: 'Electrolyte Analyzer , Promax4000',
+            image: '/slider/slider-5.jpg'
         }
     ],
 
@@ -88,17 +96,20 @@ const config = {
         {
             name: 'John Doe',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech'
+            company: 'Khan Bio Tech',
+            image: '/site/pic-1.jpg'
         },
         {
             name: 'John Doe',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech'
+            company: 'Khan Bio Tech',
+            image: '/site/pic-1.jpg'
         },
         {
             name: 'John Doe',
             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-            company: 'Khan Bio Tech'
+            company: 'Khan Bio Tech',
+            image: '/site/pic-1.jpg'
         },
     ],
 

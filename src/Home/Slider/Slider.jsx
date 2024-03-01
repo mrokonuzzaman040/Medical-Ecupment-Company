@@ -43,9 +43,9 @@ const Slider = () => {
                     config.slidercontent.map( ( item, index ) => (
                         <SwiperSlide key={ index }>
                             <div className="">
-                                <img src={ item.image } alt={ item.title } className="w-full h-full object-cover" />
-                                <div className="absolute top-0 left-0 w-full h-full bg-green-600 bg-opacity-50 flex items-center justify-center">
-                                    <div className="text-white text-center">
+                                <img src={ item.image } alt={ item.title } className="" />
+                                <div className="absolute top-0 left-0 w-full h-full bg-white bg-opacity-50 flex items-center justify-center">
+                                    <div className="text-black text-center">
                                         <h2 className="text-2xl font-bold">{ item.title }</h2>
                                         <p>{ item.description }</p>
                                     </div>

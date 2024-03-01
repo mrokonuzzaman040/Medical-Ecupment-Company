@@ -3,6 +3,7 @@ import Header from '../Common/Header/Header';
 import ProductCard from './ProductCard';
 import usePublicApi from '../../Hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
+import { Link } from 'react-router-dom';
 
 
 const Products = () => {
@@ -12,6 +13,8 @@ const Products = () => {
             queryKey: [ 'product' ],
             queryFn: async () => {
                 const res = await axiosPublic.get( '/machine' );
+                // slice the data to 8
+                res.data = res.data.slice( 0, 8 );
                 return res.data;
             }
         } );
@@ -83,6 +86,9 @@ const Products = () => {
                         <ProductCard key={ index } name={ item.name } brand={ item.brand } image={ item.image } link={ item.id } />
                     ) )
                 }
+            </div>
+            <div className="">
+                <Link to="/machinesandequipment" className="text-center block w-40 mx-auto mt-5 py-2 px-4 bg-primary text-white rounded-md">View All</Link>
             </div>
         </div>
     );
