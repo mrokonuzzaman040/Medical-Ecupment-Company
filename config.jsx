@@ -49,6 +49,10 @@ const config = {
             {
                 name: "Consumable & Accessories",
                 url: '/consumableandaccessories',
+            },
+            {
+                name: "Machine & Equipment",
+                url: '/machinesandequipment',
             }
         ],
     },

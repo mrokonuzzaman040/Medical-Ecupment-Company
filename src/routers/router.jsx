@@ -23,6 +23,7 @@ import ElsReagnt from "../Admin/Dashboard/Home/Products/ElsReagnt";
 import Device from "../Admin/Dashboard/Home/Products/Device";
 import CoaDevice from "../Admin/Dashboard/Home/Products/CoaDevice";
 import MacDevice from "../Admin/Dashboard/Home/Products/MacDevice";
+import MachineAndEquipment from "../Home/MachineAndEquipment";
 
 const router = createBrowserRouter( [
     {
@@ -73,6 +74,10 @@ const router = createBrowserRouter( [
             {
                 path: "/consumableandaccessories",
                 element: <ConsumableAccessories />,
+            },
+            {
+                path: "/machinesandequipment",
+                element: <MachineAndEquipment />,
             },
             {
                 path: '/login',
