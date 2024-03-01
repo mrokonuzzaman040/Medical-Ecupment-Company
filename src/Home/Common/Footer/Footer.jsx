@@ -12,7 +12,7 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Social</h6>
                 <div className="grid grid-flow-col gap-4">
-                    <a href="https://www.facebook.com" target="_blank" rel="noreferrer" className="btn btn-square btn-ghost hover:text-green-500">
+                    <a href="https://www.facebook.com/khanbiotech22" target="_blank" rel="noreferrer" className="btn btn-square btn-ghost hover:text-green-500">
                         <FiFacebook />
                     </a>
                     <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="btn btn-square btn-ghost hover:text-green-500">

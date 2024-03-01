@@ -31,7 +31,7 @@ const Layout = () => {
                 </div>
                 <div className="flex-1">
                     <div className="flex items-center justify-between p-4 h-16 bg-gray-900 text-white">
-                        <h1 className="text-2xl">Khan Bio Tech <span>Dashboard</span></h1>
+                        <h1 className="text-2xl">Khan Biotech <span>Dashboard</span></h1>
                         <button className='btn btn-success' onClick={ handleLogOut }>Logout</button>
                     </div>
                     <div className="p-4 items-center justify-end flex flex-col">
