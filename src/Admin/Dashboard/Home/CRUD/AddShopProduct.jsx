@@ -82,8 +82,7 @@ const AddShopProduct = () => {
                     </div>
                     <div className="">
                         <label htmlFor="hs-validation-name-error" className="block text-sm  mb-1 font-bold">Stock</label>
-                        <textarea class="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" rows="3" placeholder="This is a textarea placeholder"></textarea>
-
+                        <textarea className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none" placeholder="This is a textarea placeholder"></textarea>
                     </div>
 
                 </div>

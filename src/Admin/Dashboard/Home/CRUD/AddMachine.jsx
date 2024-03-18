@@ -111,7 +111,7 @@ const AddMachine = ( { api } ) => {
     };
 
     return (
-        <>
+        <div className='flex lg:flex-row-reverse sm:flex-col justify-between items-center bg-slate-300 p-10 rounded-lg w-full'>
             <div className="flex sm:flex-col p-4 gap-4">
 
                 <div className="grid grid-cols-1 gap-4 p-5 rounded-xl">
@@ -151,7 +151,7 @@ const AddMachine = ( { api } ) => {
             </div>
 
             <div className="">
-                <div className="grid grid-cols-5 gap-4">
+                <div className="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-4 lg:gap-2 items-center">
                     <input type="text" placeholder="Name" className="border border-gray-400 p-2 rounded" />
                     <input type="text" placeholder="Model" className="border border-gray-400 p-2 rounded" />
                     <input type="text" placeholder="Brand" className="border border-gray-400 p-2 rounded" />
@@ -160,7 +160,7 @@ const AddMachine = ( { api } ) => {
                     <button onClick={ () => addMachine() } className="btn btn-accent">Add</button>
                 </div>
             </div>
-        </>
+        </div>
     )
 };
 
