@@ -27,6 +27,7 @@ const Layout = () => {
                         <NavLink to={ '/dashboard/deviceandstrips' } className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 border-green-500' : 'hover:border-b-4 hover:border-green-500' }>Device & Strips</NavLink>
                         <NavLink to={ '/dashboard/consumableandaccessories' } className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 border-green-500' : 'hover:border-b-4 hover:border-green-500' }>Consumable & Accessories</NavLink>
                         <NavLink to={ '/dashboard/machine' } className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 border-green-500' : 'hover:border-b-4 hover:border-green-500' }>Machine</NavLink>
+                        <NavLink to={ '/dashboard/shop-item' } className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 border-green-500' : 'hover:border-b-4 hover:border-green-500' }>Shop Item</NavLink>
                     </div>
                 </div>
                 <div className="flex-1">
