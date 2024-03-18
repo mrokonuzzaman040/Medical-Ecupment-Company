@@ -25,6 +25,7 @@ import CoaDevice from "../Admin/Dashboard/Home/Products/CoaDevice";
 import MacDevice from "../Admin/Dashboard/Home/Products/MacDevice";
 import MachineAndEquipment from "../Home/MachineAndEquipment";
 import Shop from "../Home/Shop/Shop";
+import ShopItem from "../Home/Shop/ShopItem";
 
 const router = createBrowserRouter( [
     {
@@ -46,6 +47,11 @@ const router = createBrowserRouter( [
             {
                 path: "/shop",
                 element: <Shop />,
+            },
+            {
+                path: "itemDetails/:id",
+                element: <ShopItem />,
+                loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/machine/${params.id}` )
             },
             {
                 path: "/clients",
