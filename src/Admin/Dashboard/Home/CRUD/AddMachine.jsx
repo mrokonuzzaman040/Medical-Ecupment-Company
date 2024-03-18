@@ -3,8 +3,7 @@ import useAxiosImage from '../../../../Hooks/useAxiosImage';
 import usePublicApi from '../../../../Hooks/useAxiosPublic';
 import Swal from 'sweetalert2';
 
-// @ts-ignore
-// @ts-ignore
+
 const AddMachine = ( { api } ) => {
     const publicApi = usePublicApi();
     const imageApi = useAxiosImage();
