@@ -25,6 +25,10 @@ const config = {
                 name: 'Contact',
                 url: '/contact',
             },
+            {
+                name: 'Shop',
+                url: '/shop',
+            },
         ],
     },
 

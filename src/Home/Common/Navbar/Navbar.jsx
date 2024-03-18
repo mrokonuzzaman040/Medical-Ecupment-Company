@@ -40,6 +40,11 @@ const Navbar = () => {
                                 Contact Us
                             </NavLink>
                         </li>
+                        <li>
+                            <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
+                                Shop
+                            </NavLink>
+                        </li>
                     </ul>
                 </div>
                 <Link to={ '/' } className="text-lg font-bold"><img className='lg:w-1/3 sm:w-1/2' src={ config.site.logo } alt="" /></Link>
@@ -69,6 +74,11 @@ const Navbar = () => {
                     <li>
                         <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/clients' }>
                             Our Clients
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
+                            Shop
                         </NavLink>
                     </li>
                 </ul>

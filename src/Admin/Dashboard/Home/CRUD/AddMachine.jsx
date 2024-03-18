@@ -97,6 +97,17 @@ const AddMachine = ( { api } ) => {
         } catch ( error ) {
             console.log( error );
         }
+
+        // reset the form
+        Name.value = '';
+        Model.value = '';
+        Brand.value = '';
+        Manufacturer.value = '';
+        Assembly.value = '';
+        setImgUrl( '' );
+        setPdfUrl( '' );
+
+        
     }
 
     console.log( uploadPdfProgress )
