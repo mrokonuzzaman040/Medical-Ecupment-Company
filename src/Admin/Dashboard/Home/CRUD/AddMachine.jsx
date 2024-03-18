@@ -107,10 +107,8 @@ const AddMachine = ( { api } ) => {
         setImgUrl( '' );
         setPdfUrl( '' );
 
-        
-    }
 
-    console.log( uploadPdfProgress )
+    };
 
     return (
         <>

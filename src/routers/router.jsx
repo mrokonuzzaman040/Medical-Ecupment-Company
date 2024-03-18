@@ -26,6 +26,7 @@ import MacDevice from "../Admin/Dashboard/Home/Products/MacDevice";
 import MachineAndEquipment from "../Home/MachineAndEquipment";
 import Shop from "../Home/Shop/Shop";
 import ShopItem from "../Home/Shop/ShopItem";
+import AddShopProduct from "../Admin/Dashboard/Home/CRUD/AddShopProduct";
 
 const router = createBrowserRouter( [
     {
@@ -124,6 +125,10 @@ const router = createBrowserRouter( [
             {
                 path: 'machine',
                 element: <MacDevice />,
+            },
+            {
+                path: 'shop-item',
+                element: <AddShopProduct />,
             },
             {
                 path: '*',
