@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const ShopItemDetails = () => {
     const data = useLoaderData();
+    // @ts-ignore
     const productData = data[ 0 ];
 
     const { name, brand, countryorigin, price, discountprice, specification, imageurls } = productData;
