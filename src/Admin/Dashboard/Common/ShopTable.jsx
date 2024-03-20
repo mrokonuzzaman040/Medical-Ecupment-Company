@@ -91,7 +91,12 @@ const ShopTable = ( { api } ) => {
                         { shopItem.map( ( machine, index ) => (
                             <tr key={ index }>
                                 <td className="px-6 py-4 lg:w-32 whitespace-nowrap">
-                                    <img src={ machine.image } alt={ machine.name } className="w-20 h-20 object-cover" />
+                                    {
+                                        machine.imageurls ?
+                                            <img src={ JSON.parse( machine.imageurls )[ 0 ] } alt={ machine.name } className="w-20 h-20 object-cover rounded-lg" />
+                                            :
+                                            <img src="https://via.placeholder.com/150" alt="placeholder" className="w-20 h-20 object-cover rounded-lg" />
+                                    }
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">{ machine.name }</td>
                                 <td className="px-6 py-4 whitespace-nowrap">{ machine.brand }</td>

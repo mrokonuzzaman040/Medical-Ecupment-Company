@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ShopItemDetails = () => {
     const data = useLoaderData();
     // @ts-ignore
     const productData = data[ 0 ];
 
-    const { name, brand, countryorigin, price, discountprice, specification, imageurls } = productData;
+    const { id, name, brand, countryorigin, price, discountprice, specification, imageurls } = productData;
     const productImage = JSON.parse( productData.imageurls );
 
     const [ showImage, setShowImage ] = useState( productImage[ 0 ] );
@@ -36,12 +37,12 @@ const ShopItemDetails = () => {
                         <p className="text-lg font-semibold text-gray-600">{ brand }</p>
                         <p className="text-lg font-semibold text-gray-600">{ countryorigin }</p>
                         <div className="flex gap-2 items-center">
-                            <p className="text-2xl font-semibold">${ price }</p>
-                            <p className="text-lg font-semibold line-through text-red-600">${ discountprice }</p>
+                            <p className="text-2xl font-semibold"> <span className='text-sm'>৳</span> { discountprice }</p>
+                            <p className="text-lg font-semibold line-through text-red-600"><span className='text-sm'>৳</span>{ price }</p>
                         </div>
                         <div className="flex gap-4">
-                            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg">Add to Cart</button>
-                            <button className="bg-blue-600 text-white py-2 px-4 rounded-lg">Buy Now</button>
+                            <Link to={ `/buyNow/${id}` } className="bg-blue-600 text-white py-2 px-4 rounded-lg">Buy Now</Link>
+
                         </div>
                     </div>
                 </div>

@@ -25,9 +25,9 @@ import CoaDevice from "../Admin/Dashboard/Home/Products/CoaDevice";
 import MacDevice from "../Admin/Dashboard/Home/Products/MacDevice";
 import MachineAndEquipment from "../Home/MachineAndEquipment";
 import Shop from "../Home/Shop/Shop";
-import ShopItem from "../Home/Shop/ShopItem";
 import AddShopProduct from "../Admin/Dashboard/Home/CRUD/AddShopProduct";
 import ShopItemDetails from "../Home/Shop/ShopItemDetails";
+import BuyNow from "../components/BuyNow";
 
 const router = createBrowserRouter( [
     {
@@ -53,6 +53,11 @@ const router = createBrowserRouter( [
             {
                 path: "itemDetails/:id",
                 element: <ShopItemDetails />,
+                loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/shopitems/${params.id}` )
+            },
+            {
+                path: "buyNow/:id",
+                element: <BuyNow />,
                 loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/shopitems/${params.id}` )
             },
             {

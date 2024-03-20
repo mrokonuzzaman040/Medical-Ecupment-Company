@@ -33,8 +33,8 @@ const Shop = () => {
                                 <h1 className='text-xl font-bold'>{ product.name }</h1>
                                 <p className='text-lg font-semibold text-gray-600'>{ product.brand }</p>
                                 <div className='flex gap-2 items-center'>
-                                    <p className='text-xl font-semibold'>${ product.price }</p>
-                                    <p className='text-lg font-semibold line-through text-red-600'>${ product.discountprice }</p>
+                                    <p className='text-xl font-semibold'><span className='text-sm'>৳</span>{ product.discountprice }</p>
+                                    <p className='text-lg font-semibold line-through text-red-600'><span className='text-sm'>৳</span>{ product.price }</p>
                                 </div>
                             </div>
                         </Link>
