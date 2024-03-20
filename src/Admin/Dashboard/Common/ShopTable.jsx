@@ -7,9 +7,9 @@ import { IoReload } from "react-icons/io5";
 const ShopTable = ( { api } ) => {
     const axiosPublic = usePublicApi();
 
-    const { data: product = [], isPending: loading, refetch }
+    const { data: shopItem = [], isPending: loading, refetch }
         = useQuery( {
-            queryKey: [ 'product' ],
+            queryKey: [ 'shopItem' ],
             queryFn: async () => {
                 const res = await axiosPublic.get( `${api}` );
                 return res.data;
@@ -64,7 +64,7 @@ const ShopTable = ( { api } ) => {
         </>;
     }
 
-    console.log( product );
+    // console.log( shopItem );
 
     return (
         <div>
@@ -88,7 +88,7 @@ const ShopTable = ( { api } ) => {
                         </tr>
                     </thead>
                     <tbody>
-                        { product.map( ( machine, index ) => (
+                        { shopItem.map( ( machine, index ) => (
                             <tr key={ index }>
                                 <td className="px-6 py-4 lg:w-32 whitespace-nowrap">
                                     <img src={ machine.image } alt={ machine.name } className="w-20 h-20 object-cover" />

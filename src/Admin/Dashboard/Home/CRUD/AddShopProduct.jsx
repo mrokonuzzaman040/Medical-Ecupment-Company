@@ -18,7 +18,7 @@ const AddShopProduct = () => {
             formData.append( `image`, productImages[ i ] );
         }
         try {
-            const res = await imageUpload.post( '/multipleImages', formData, {
+            const res = await imageUpload.post( 'image-bucket', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
@@ -29,6 +29,7 @@ const AddShopProduct = () => {
                 }
             } );
             setproductImageurls( res.data.image_urls );
+            console.log( res.data.image_urls );
         } catch ( error ) {
             console.log( error );
         }
@@ -64,7 +65,6 @@ const AddShopProduct = () => {
             return;
         }
         const res = await usePublicApi().post( '/shopitems', data );
-
         if ( res.status === 200 ) {
             Swal.fire( {
                 icon: 'success',
