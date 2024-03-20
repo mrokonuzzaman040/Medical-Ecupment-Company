@@ -13,6 +13,15 @@ const AddShopProduct = () => {
     const imageUpload = useAxiosImage();
 
     const uploadproductImages = async () => {
+        if ( productImages.length === 0 ) {
+            Swal.fire( {
+                icon: 'error',
+                title: 'Please select images to upload',
+                showConfirmButton: false,
+                timer: 1500
+            } );
+            return;
+        }
         const formData = new FormData();
         for ( let i = 0; i < productImages.length; i++ ) {
             formData.append( `image`, productImages[ i ] );
@@ -29,7 +38,8 @@ const AddShopProduct = () => {
                 }
             } );
             setproductImageurls( res.data.image_urls );
-            console.log( res.data.image_urls );
+            setUploadProgress( 0 );
+            setproductImages( [] );
         } catch ( error ) {
             console.log( error );
         }
@@ -87,11 +97,11 @@ const AddShopProduct = () => {
                         </label>
                         <div className="max-w-max h-48">
                             {/* upload images and show it here */ }
-                            <div className="grid grid-cols-4">
+                            <div className="grid grid-cols-4 gap-2">
                                 {
                                     productImageurls.map( ( image, index ) => (
                                         <div className='flex items-center' key={ index }>
-                                            <img className='w-1/2' src={ image } alt="product" />
+                                            <img className='h-14 w-full rounded-xl' src={ image } alt="product" />
                                         </div>
                                     ) )
                                 }

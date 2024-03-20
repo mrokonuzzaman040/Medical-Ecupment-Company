@@ -27,6 +27,7 @@ import MachineAndEquipment from "../Home/MachineAndEquipment";
 import Shop from "../Home/Shop/Shop";
 import ShopItem from "../Home/Shop/ShopItem";
 import AddShopProduct from "../Admin/Dashboard/Home/CRUD/AddShopProduct";
+import ShopItemDetails from "../Home/Shop/ShopItemDetails";
 
 const router = createBrowserRouter( [
     {
@@ -51,8 +52,8 @@ const router = createBrowserRouter( [
             },
             {
                 path: "itemDetails/:id",
-                element: <ShopItem />,
-                loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/machine/${params.id}` )
+                element: <ShopItemDetails />,
+                loader: ( { params } ) => fetch( `https://api.khanbiotech.com/api/shopitems/${params.id}` )
             },
             {
                 path: "/clients",
