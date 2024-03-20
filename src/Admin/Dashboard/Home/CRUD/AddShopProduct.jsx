@@ -18,7 +18,7 @@ const AddShopProduct = () => {
             formData.append( `image`, productImages[ i ] );
         }
         try {
-            const res = await imageUpload.post( 'upload/multipleImages', formData, {
+            const res = await imageUpload.post( '/multipleImages', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 },
