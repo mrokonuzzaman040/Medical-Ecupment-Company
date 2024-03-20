@@ -24,7 +24,7 @@ const Shop = () => {
             <div className='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
                 <div className='grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4'>
                     { product.map( ( product, index ) => (
-                        <Link to={ `/shop/${product.id}` } key={ index }>
+                        <Link to={ `/itemDetails/${product.id}` } key={ index }>
                             <div className='border p-4 rounded-xl shadow-lg'>
                                 {
                                     product.imageurls &&
