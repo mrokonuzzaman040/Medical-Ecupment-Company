@@ -54,9 +54,26 @@ const AddShopProduct = () => {
             imageurls
         };
 
+        if ( !name || !brand || !countryorigin || !price || !discountprice || !specification || imageurls.length === 0 ) {
+            Swal.fire( {
+                icon: 'error',
+                title: 'All fields are required',
+                showConfirmButton: false,
+                timer: 1500
+            } );
+            return;
+        }
         const res = await usePublicApi().post( '/shopitems', data );
+
         if ( res.status === 200 ) {
-            Swal.fire( 'Product Added', 'Product has been added to shop', 'success' );
+            Swal.fire( {
+                icon: 'success',
+                title: 'Product Added Successfully',
+                showConfirmButton: false,
+                timer: 1500
+            } );
+            e.target.reset();
+            setproductImageurls( [] );
         }
     };
 
@@ -81,6 +98,9 @@ const AddShopProduct = () => {
                             </div>
                         </div>
                         <div className="">
+                            <div className="h-1 bg-gray-300 w-full rounded-lg mt-2">
+                                <div className="h-1 bg-blue-500 w-1/2 rounded-lg" style={ { width: `${uploadProgress}%` } }></div>
+                            </div>
                             <div className="flex justify-between items-center gap-5">
                                 <div className="">
                                     <input
@@ -107,6 +127,9 @@ const AddShopProduct = () => {
                 </div>
 
                 <form onSubmit={ handleSubmit } className="">
+                    <div className="">
+                        <h1 className="text-2xl font-bold mb-4 text-center uppercase">Add Product to Shop</h1>
+                    </div>
                     <div className="grid lg:grid-cols-3 sm:grid-cols-2 sm:gap-4 lg:gap-5 items-center">
                         <div className="">
                             <label htmlFor="hs-validation-name-error" className="block text-sm  mb-1 font-bold">Name</label>

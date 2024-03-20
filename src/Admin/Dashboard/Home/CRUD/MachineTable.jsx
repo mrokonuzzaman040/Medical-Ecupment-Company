@@ -52,7 +52,7 @@ const MachineTable = ( { api } ) => {
 
     if ( loading ) {
         return <>
-            <div className="min-h-60 flex flex-col bg-white border shadow-sm rounded-xl dark:bg-gray-800 dark:border-gray-700 dark:shadow-slate-700/[.7]">
+            <div className="h-full flex flex-col bg-white border shadow-sm rounded-xl ">
                 <div className="flex flex-auto flex-col justify-center items-center p-4 md:p-5">
                     <div className="flex justify-center">
                         <div className="animate-spin inline-block size-6 border-[3px] border-current border-t-transparent text-blue-600 rounded-full dark:text-blue-500" role="status" aria-label="loading">
@@ -66,7 +66,7 @@ const MachineTable = ( { api } ) => {
 
     return (
         <div>
-            <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md m-5">
+            <div className="overflow-hidden rounded-lg border border-gray-200 shadow-md">
                 <div className="flex justify-end mb-4">
                     <button onClick={ () => refetch() } className="bg-blue-500 flex items-center hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                         <span className='mr-2'><IoReload /> </span>Reload
