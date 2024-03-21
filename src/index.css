@@ -7,3 +7,19 @@ html {
   font-family: "Roboto", sans-serif;
   scroll-behavior: smooth;
 }
+
+/* Custom CSS file or a <style> tag */
+.group-hover\:block.delay-hidden {
+  display: none !important;
+}
+
+.group:hover .group-hover\:block.delay-hidden {
+  display: block !important;
+  animation: delayHide 0s linear 1.5s forwards;
+}
+
+@keyframes delayHide {
+  to {
+    visibility: hidden;
+  }
+}
