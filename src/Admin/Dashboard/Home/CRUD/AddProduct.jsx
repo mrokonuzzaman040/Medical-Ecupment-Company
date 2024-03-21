@@ -42,7 +42,7 @@ const AddProduct = ( { api } ) => {
     return (
         <div className="mt-10 mb-10 w-full">
             <form onSubmit={ addProduct }>
-                <div className="grid w-full lg:grid-cols-2 sm:grid-cols-2 gap-4">
+                <div className="grid items-center justify-center mx-auto grid-cols-2 w-full gap-4">
                     <div className="relative bg-inherit">
                         <input type="text" id="name" name="name" className="peer bg-transparent h-10 w-72 rounded-lg text-gray-700 placeholder-transparent ring-2 px-2 ring-gray-500 focus:ring-sky-600 focus:outline-none focus:border-rose-600" placeholder="name" /><label htmlFor="name" className="absolute cursor-text left-0 -top-3 text-sm text-black bg-inherit mx-1 px-1 peer-placeholder-shown:text-base peer-placeholder-shown:text-black peer-placeholder-shown:top-2 peer-focus:-top-3 peer-focus:text-sky-600 peer-focus:text-sm transition-all uppercase ">name</label>
                     </div>

@@ -154,8 +154,8 @@ const AddMachine = ( { api } ) => {
                     <input type="text" placeholder="Name" className="border border-gray-400 p-2 rounded" />
                     <input type="text" placeholder="Model" className="border border-gray-400 p-2 rounded" />
                     <input type="text" placeholder="Brand" className="border border-gray-400 p-2 rounded" />
-                    <input type="text" placeholder="Manufacturer" className="border border-gray-400 p-2 rounded" />
-                    <input type="text" placeholder="Assembly" className="border border-gray-400 p-2 rounded" />
+                    <input type="text" placeholder="Country Of Origin" className="border border-gray-400 p-2 rounded" />
+                    <input type="text" placeholder="Specification " className="border border-gray-400 p-2 rounded" />
                     <button onClick={ () => addMachine() } className="btn btn-accent">Add</button>
                 </div>
             </div>

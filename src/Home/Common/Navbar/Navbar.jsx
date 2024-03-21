@@ -4,6 +4,8 @@ import { config } from '../../../../config';
 
 
 const Navbar = () => {
+    const [ isOpen, setIsOpen ] = React.useState( false );
+    const toggle = () => setIsOpen( !isOpen );
     return (
         <div className="navbar bg-gray-200 ">
             <div className="navbar-start">
@@ -26,8 +28,8 @@ const Navbar = () => {
                             </ul>
                         </li>
                         <li>
-                            <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/about' }>
-                                About Us
+                            <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
+                                Shop
                             </NavLink>
                         </li>
                         <li>
@@ -36,15 +38,16 @@ const Navbar = () => {
                             </NavLink>
                         </li>
                         <li>
+                            <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/about' }>
+                                About Us
+                            </NavLink>
+                        </li>
+                        <li>
                             <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/contact' }>
                                 Contact Us
                             </NavLink>
                         </li>
-                        <li>
-                            <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-green-700 font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
-                                Shop
-                            </NavLink>
-                        </li>
+
                     </ul>
                 </div>
                 <Link to={ '/' } className="text-lg font-bold"><img className='lg:w-1/3 sm:w-1/2' src={ config.site.logo } alt="" /></Link>
@@ -57,7 +60,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <details>
+                        <details className=''>
                             <summary>Products</summary>
                             <ul className="p-2 z-[10] text-gray-700 w-72">
                                 {
@@ -67,8 +70,8 @@ const Navbar = () => {
                         </details>
                     </li>
                     <li>
-                        <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/about' }>
-                            About Us
+                        <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
+                            Shop
                         </NavLink>
                     </li>
                     <li>
@@ -77,10 +80,12 @@ const Navbar = () => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
-                            Shop
+                        <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/about' }>
+                            About Us
                         </NavLink>
                     </li>
+
+
                 </ul>
             </div>
             <div className="navbar-end">

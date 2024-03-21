@@ -44,12 +44,12 @@ const Machine = ( { name, model, brand, manufacturer, assembly, image, pdf } ) =
                         </li>
                         <li className="flex items-center gap-4">
                             <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Manufacturer</p>
+                            <p className="text-lg font-bold">Country Of Origin</p>
                             <p>{ manufacturer }</p>
                         </li>
                         <li className="flex items-center gap-4">
                             <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Assembly</p>
+                            <p className="text-lg font-bold">Specification</p>
                             <p>{ assembly }</p>
                         </li>
                     </ul>
