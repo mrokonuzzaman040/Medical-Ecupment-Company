@@ -27,7 +27,7 @@ const CommonTable = ( { api } ) => {
         </div>;
     }
     return (
-        <div className='max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
+        <div className='w-fit mx-auto px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto'>
             <div className="flex flex-col">
                 <div className="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
                     <div className="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">

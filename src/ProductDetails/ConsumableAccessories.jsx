@@ -1,12 +1,13 @@
 import React from 'react';
 import Header from '../Home/Common/Header/Header';
 import CommonTable from '../components/CommonTable';
+import ConsumablePublicTable from './ConsumablePublicTable';
 
 const ConsumableAccessories = () => {
     return (
         <div>
             <Header text="Consumable & Accessories" />
-            <CommonTable api={ 'coadevice' } />
+            <ConsumablePublicTable api={ 'coadevice' } />
         </div>
     );
 };
