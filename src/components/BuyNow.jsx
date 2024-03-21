@@ -15,7 +15,6 @@ const BuyNow = () => {
 
     const [ userInfo, setUserInfo ] = useState( {
         name: '',
-        email: '',
         phone: '',
         address: '',
         quantity: 1
@@ -33,7 +32,7 @@ const BuyNow = () => {
         const templateParams = {
             from_name: userInfo.name,
             to_name: 'Recipient Name',
-            message: `-------Customer info---------\nName: ${userInfo.name}\nEmail: ${userInfo.email}\nPhone: ${userInfo.phone}\nAddress: ${userInfo.address}\nQuantity: ${userInfo.quantity}\n\n
+            message: `-------Customer info---------\nName: ${userInfo.name}\nPhone: ${userInfo.phone}\nAddress: ${userInfo.address}\nQuantity: ${userInfo.quantity}\n\n
             -------Product info---------
             \nProduct: ${name} \nPrice: ${price} \nDiscount Price: ${discountprice} \nSpecification: ${specification} \nBrand: ${brand} \nCountry Origin: ${countryorigin}`,
         };
@@ -51,6 +50,7 @@ const BuyNow = () => {
                         popup: 'animate__animated animate__fadeOutUp'
                     }
                 } );
+                console.log( 'SUCCESS!', response );
             } )
             .catch( ( error ) => {
                 console.log( 'FAILED...', error );
@@ -70,10 +70,8 @@ const BuyNow = () => {
 
     const handleOrderSubmit = ( e ) => {
         e.preventDefault();
-        console.log( 'Placing order:', userInfo );
         setUserInfo( {
             name: '',
-            email: '',
             phone: '',
             address: '',
             quantity: 1,
@@ -105,18 +103,6 @@ const BuyNow = () => {
                                     />
                                 </label>
 
-                                <label className='flex flex-col'>
-                                    <span className='text-black font-medium mb-4'>Your Email</span>
-                                    <input
-                                        type='email'
-                                        name='email'
-                                        required
-                                        value={ userInfo.email }
-                                        onChange={ handleInputChange }
-                                        placeholder="What's your email?"
-                                        className='bg-gray-50 p-4 rounded-lg outline-none border-none font-medium'
-                                    />
-                                </label>
                                 <label className='flex flex-col'>
                                     <span className='text-black font-medium mb-4'>Your Phone</span>
                                     <input
