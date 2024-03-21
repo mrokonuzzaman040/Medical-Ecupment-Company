@@ -40,10 +40,31 @@ const BuyNow = () => {
 
         emailjs.send( 'service_7hchbjm', 'template_kqszb6p', templateParams, 'oa50EUfsOPWHBPFgg' )
             .then( ( response ) => {
-                console.log( 'Email sent successfully!', response.status, response.text );
+                Swal.fire( {
+                    title: 'Order Placed!',
+                    text: 'Our delivery man will get back to you as soon as possible.',
+                    icon: 'success',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                } );
             } )
             .catch( ( error ) => {
-                console.error( 'Error sending email:', error );
+                console.log( 'FAILED...', error );
+                Swal.fire( {
+                    title: 'Something Went Wrong!',
+                    text: 'Please try again later.',
+                    icon: 'error',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeInDown'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOutUp'
+                    }
+                } );
             } );
     };
 
@@ -76,6 +97,7 @@ const BuyNow = () => {
                                     <input
                                         type='text'
                                         name='name'
+                                        required
                                         value={ userInfo.name }
                                         onChange={ handleInputChange }
                                         placeholder="What's your good name?"
@@ -88,6 +110,7 @@ const BuyNow = () => {
                                     <input
                                         type='email'
                                         name='email'
+                                        required
                                         value={ userInfo.email }
                                         onChange={ handleInputChange }
                                         placeholder="What's your email?"
@@ -99,6 +122,7 @@ const BuyNow = () => {
                                     <input
                                         type='phone'
                                         name='phone'
+                                        required
                                         value={ userInfo.phone }
                                         onChange={ handleInputChange }
                                         placeholder="Enter Your Phone Number"
@@ -111,6 +135,7 @@ const BuyNow = () => {
                                     <input
                                         type='text'
                                         name='address'
+                                        required
                                         value={ userInfo.address }
                                         onChange={ handleInputChange }
                                         placeholder="Enter Your Address"
@@ -119,7 +144,7 @@ const BuyNow = () => {
                                 </label>
 
                                 <label className='flex flex-col'>
-                                    <span className='text-black font-medium mb-4'>Your Message</span>
+                                    <span className='text-black font-medium mb-4'>Quantity</span>
                                     <input
                                         type='number'
                                         name='quantity'
@@ -133,7 +158,7 @@ const BuyNow = () => {
                                 <button
                                     type='submit'
                                     className='bg-blue-500 text-white py-3 rounded-lg font-medium hover:bg-blue-600 transition-all duration-300'>
-                                    Send Message
+                                    Place Order
                                 </button>
                             </form>
                         </div>
