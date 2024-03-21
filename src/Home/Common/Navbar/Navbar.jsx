@@ -59,15 +59,15 @@ const Navbar = () => {
                             Home
                         </NavLink>
                     </li>
-                    <li>
-                        <details className=''>
-                            <summary>Products</summary>
-                            <ul className="p-2 z-[10] text-gray-700 w-72">
-                                {
-                                    config.navbarsubmenu.links.map( ( link, index ) => { return ( <li key={ index }><Link to={ link.url }>{ link.name }</Link></li> ) } )
-                                }
-                            </ul>
-                        </details>
+                    <li className="dropdown">
+                        <div tabIndex={ 0 } role="button" className="">
+                            Products
+                        </div>
+                        <ul tabIndex={ 0 } className="menu menu-sm dropdown-content mt-30 z-[10] p-2 shadow bg-base-100 rounded-box w-56">
+                            {
+                                config.navbarsubmenu.links.map( ( link, index ) => { return ( <li key={ index }><Link to={ link.url }>{ link.name }</Link></li> ) } )
+                            }
+                        </ul>
                     </li>
                     <li>
                         <NavLink className={ ( { isActive, isPending } ) => isActive ? 'border-b-4 text-white font-bold border-green-500' : 'hover:border-b-4 hover:border-green-500' } to={ '/shop' }>
