@@ -5,8 +5,8 @@ const About = () => {
         <div className=' max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto flex flex-col items-center justify-center'>
             <div className="sm:flex items-center justify-center max-w-screen-xl">
                 <div className="sm:w-1/2 p-10">
-                    <div className="image object-center  text-center">
-                        <img className='rounded-full' src="./about/admin.png" />
+                    <div className="image object-center text-center">
+                        <img className='rounded-full w-1/2' src="./about/admin.png" />
                     </div>
                 </div>
                 <div className="sm:w-1/2 p-5">
