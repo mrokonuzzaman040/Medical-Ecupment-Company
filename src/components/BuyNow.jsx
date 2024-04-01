@@ -86,6 +86,13 @@ const BuyNow = () => {
                     <div className="mt-12 grid items-center">
                         <div className="flex flex-col border rounded-xl p-4 sm:p-6 lg:p-8">
                             <h2 className="mb-8 text-xl text-center font-semibold text-balck">Order Information</h2>
+                            <div className="text-center mb-4 shadow-lg p-4 rounded-lg">
+                                <h2>আপনার কাংখিত অর্ডার কনফার্ম করতে নিচের ফর্মটি পুরন করুন, এবং Place Order এ ক্লিক করুন।
+                                    <br />
+                                    ডেলিভেরী চার্জ - ঢাকার মধ্যে- ৮০ টাকা <br />
+                                    ঢাকার বাহিরে ১৫০.০০ <br />
+                                    ডেলিভারী সময়ঃ ২-৫ কর্ম দিবসের মধ্যে</h2>
+                            </div>
                             <form
                                 onSubmit={ handleOrderSubmit }
                                 action="" className="grid grid-cols-1 gap-6">

@@ -84,14 +84,14 @@ const ConsumableTable = ( { api } ) => {
                     <tbody>
                         { product.map( ( machine, index ) => (
                             <tr key={ index }>
-                                <td className="px-6 py-4 lg:w-32 whitespace-nowrap">
+                                <td className="px-6 py-4 lg:w-32 ">
                                     <img className='rounded-full ' src={ machine.image } alt="" />
                                 </td>
-                                <td className="px-6 py-4 whitespace-nowrap">{ machine.name }</td>
-                                <td className="px-6 py-4 whitespace-nowrap">{ machine.packsize }</td>
-                                <td className="px-6 py-4 whitespace-nowrap">{ machine.brandorigin }</td>
-                                <td className="px-6 py-4 whitespace-nowrap">{ machine.specification }</td>
-                                <td className="px-6 py-4 whitespace-nowrap">
+                                <td className="px-6 py-4 ">{ machine.name }</td>
+                                <td className="px-6 py-4 ">{ machine.packsize }</td>
+                                <td className="px-6 py-4 ">{ machine.brandorigin }</td>
+                                <td className="px-6 py-4 ">{ machine.specification }</td>
+                                <td className="px-6 py-4 ">
                                     <button className="text-red-500 hover:text-red-700" onClick={ () => deleteMachine( machine.id ) }>Delete</button>
                                 </td>
                             </tr>
