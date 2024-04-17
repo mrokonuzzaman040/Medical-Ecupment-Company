@@ -3,6 +3,10 @@ import usePublicApi from '../../../../Hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 import { IoReload } from "react-icons/io5";
+import { AiOutlineDelete } from "react-icons/ai";
+import { CiEdit } from "react-icons/ci";
+
+
 
 const ConsumableTable = ( { api } ) => {
     const axiosPublic = usePublicApi();
@@ -92,7 +96,14 @@ const ConsumableTable = ( { api } ) => {
                                 <td className="px-6 py-4 ">{ machine.brandorigin }</td>
                                 <td className="px-6 py-4 ">{ machine.specification }</td>
                                 <td className="px-6 py-4 flex gap-4">
-                                    <button className="text-red-500 hover:text-red-700" onClick={ () => deleteMachine( machine.id ) }>Delete</button>
+
+                                <button className="text-blue-500 text-2xl hover:text-blue-700">
+                                    <CiEdit />
+                                    </button>
+
+                                    <button className="text-red-500 text-2xl hover:text-red-700" onClick={ () => deleteMachine( machine.id ) }>
+                                    <AiOutlineDelete />
+                                    </button>
                                 </td>
                             </tr>
                         ) ) }
