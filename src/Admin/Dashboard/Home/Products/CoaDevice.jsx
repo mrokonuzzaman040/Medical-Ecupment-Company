@@ -1,7 +1,5 @@
 import React from 'react';
 import Header from '../../Common/Header';
-import AddProduct from '../CRUD/AddProduct';
-import ProductTable from '../CRUD/ProductTable';
 import Consumable from '../CRUD/Consumable';
 import ConsumableTable from '../CRUD/ConsumableTable';
 
@@ -11,7 +9,7 @@ const CoaDevice = () => {
             <Header product='Consumable & Accessories' />
             <Consumable api={ 'coadevice' } />
             {/* <ProductTable api={ 'coadevice' } /> */ }
-            <ConsumableTable api={ 'coadevice' } />
+            <ConsumableTable api={ 'coadevice' } editApi={'coadevice'} />
         </div>
     );
 };

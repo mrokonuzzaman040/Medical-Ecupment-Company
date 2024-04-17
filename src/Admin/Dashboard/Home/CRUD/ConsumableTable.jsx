@@ -8,7 +8,7 @@ import { CiEdit } from "react-icons/ci";
 
 
 
-const ConsumableTable = ( { api } ) => {
+const ConsumableTable = ( { api , editApi } ) => {
     const axiosPublic = usePublicApi();
     const { data: product = [], isPending: loading, refetch }
         = useQuery( {
@@ -52,6 +52,12 @@ const ConsumableTable = ( { api } ) => {
             console.log( error );
         }
     };
+
+    const editMachine = async ( id ) => {
+        // open the edit modal
+        console.log( 'Edit Machine' );
+
+        }
 
     if ( loading ) {
         return <>
@@ -97,8 +103,10 @@ const ConsumableTable = ( { api } ) => {
                                 <td className="px-6 py-4 ">{ machine.specification }</td>
                                 <td className="px-6 py-4 flex gap-4">
 
-                                <button className="text-blue-500 text-2xl hover:text-blue-700">
-                                    <CiEdit />
+                                    <button className="text-blue-500 text-2xl hover:text-blue-700" onClick={
+                                        ()=>editMachine( machine.id )
+                                    }>
+                                        <CiEdit />
                                     </button>
 
                                     <button className="text-red-500 text-2xl hover:text-red-700" onClick={ () => deleteMachine( machine.id ) }>
