@@ -5,12 +5,8 @@ import { useLoaderData } from 'react-router-dom';
 
 const MachineDetails = () => {
     const data = useLoaderData();
-    // @ts-ignore
-    const machine = data[ 0 ];
-    console.log( machine );
-    const { name, model, brand, manufacturer, assembly, image, pdf } = machine;
-
-    if ( !machine ) {
+    
+    if ( !data ) {
         return <>
             <div className="skeleton w-32 h-32">
                 <div className="animate-pulse bg-gray-300 rounded-lg h-32 w-32" />
@@ -21,7 +17,7 @@ const MachineDetails = () => {
     return (
         <>
             <Header text={ 'Machine' } />
-            <Machine name={ name } model={ model } brand={ brand } manufacturer={ manufacturer } assembly={ assembly } image={ image } pdf={ pdf } />
+            <Machine name={ data.name } model={ data.model } brand={ data.brand } manufacturer={ data.manufacturer } assembly={ data.assembly } image={ data.image } pdf={ data.pdf } />
         </>
     );
 };
