@@ -7,7 +7,7 @@ const SliderComponent = ( { name, company, img, degination } ) => {
                 <div className="flex justify-center items-start flex-col p-5 ">
 
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="none" stroke="currentColor"
-                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        strokeLinecap="round" strokeLinejoin="round" stroke-width="2"
                         className="icon icon-tabler icon-tabler-quote rotate-180 text-sky-500" viewBox="0 0 24 24">
                         <path stroke="none" d="M0 0h24v24H0z"></path>
                         <path

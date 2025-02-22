@@ -1,62 +1,109 @@
 import React from 'react';
 import { TiTickOutline } from "react-icons/ti";
 
-const Machine = ( { name, model, brand, manufacturer, assembly, image, pdf } ) => {
-    return (
-        <div className="font-[sans-serif] bg-white">
-            <div className="p-6 lg:max-w-7xl max-w-4xl mx-auto">
-                <div className="grid items-start grid-cols-1 lg:grid-cols-5 gap-12 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] p-6">
-                    <div className="lg:col-span-3 w-full lg:sticky top-0 text-center">
-                        <div className="px-4 py-10 rounded-xl shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] relative">
-                            <img src={ image } alt="Product" className="w-full rounded object-cover" />
-                        </div>
-                    </div>
-                    <div className="lg:col-span-2">
-                        <h2 className="text-2xl font-extrabold text-[#333] uppercase">Name: { name }</h2>
-                        <div className="flex flex-wrap gap-4 mt-6">
-                            <p className="text-[#333] text-4xl font-bold">Brand: { brand }</p>
-                        </div>
-
-                        <div className="flex flex-wrap gap-4 mt-10">
-                            <a href={ pdf } className='className="min-w-[200px] px-4 py-3 bg-[#36e453] hover:bg-[#66c573] text-white text-sm font-bold rounded"' target="_blank">
-                                Download Product Catalog
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div className="mt-16 shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] p-6">
-                    <h3 className="text-lg font-bold text-[#333]">Product information</h3>
-                    <ul className="mt-6 space-y-6 uppercase text-[#333]">
-                        <li className="flex items-center gap-4">
-                            <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Name</p>
-                            <p>{ name }</p>
-                        </li>
-                        <li className="flex items-center gap-4">
-                            <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Model</p>
-                            <p>{ model }</p>
-                        </li>
-                        <li className="flex items-center gap-4">
-                            <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Brand</p>
-                            <p>{ brand }</p>
-                        </li>
-                        <li className="flex items-center gap-4">
-                            <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Country Of Origin</p>
-                            <p>{ manufacturer }</p>
-                        </li>
-                        <li className="flex items-center gap-4">
-                            <TiTickOutline className="text-[#36e453] text-2xl" />
-                            <p className="text-lg font-bold">Specification</p>
-                            <p>{ assembly }</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+const Machine = ({ name, model, brand, manufacturer, assembly, image, pdf }) => {
+  return (
+    <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-100 via-white to-gray-100">
+      {/* Hero Section */}
+      <div className="relative w-full h-[320px] sm:h-[400px] flex items-center justify-center overflow-hidden">
+        {/* Blurred Background Image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${image})`, filter: 'blur(8px)' }}
+        ></div>
+        <div className="absolute inset-0 bg-black opacity-30"></div>
+        {/* Text Overlay */}
+        <div className="relative z-10 text-center px-4">
+          <h1 className="text-white text-4xl sm:text-5xl md:text-6xl font-extrabold uppercase tracking-wide drop-shadow-lg">
+            {name}
+          </h1>
+          <p className="text-white text-lg sm:text-xl mt-2 font-semibold drop-shadow-md">
+            {brand}
+          </p>
         </div>
-    );
+      </div>
+      
+      {/* Main Content */}
+      <div className="-mt-16 sm:-mt-20 md:-mt-24 px-4 sm:px-6 md:px-8 lg:px-10 flex-grow">
+        <div className="max-w-7xl mx-auto">
+          {/* Glass Card */}
+          <div className="bg-white/80 backdrop-blur-lg rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {/* Left: Product Image */}
+              <div className="flex justify-center md:justify-start">
+                <div className="w-full max-w-md">
+                  <div className="rounded-2xl overflow-hidden shadow-xl transform transition hover:scale-105">
+                    <img src={image} alt={name} className="w-full h-auto object-cover" />
+                  </div>
+                </div>
+              </div>
+              
+              {/* Right: Product Details */}
+              <div className="flex flex-col justify-between">
+                <div>
+                  <h2 className="text-3xl font-bold text-gray-800 mb-4 border-b pb-2">
+                    Product Details
+                  </h2>
+                  <ul className="space-y-4 text-gray-700">
+                    <li className="flex items-start gap-3">
+                      <TiTickOutline className="text-green-500 text-2xl mt-1" />
+                      <div>
+                        <p className="text-sm font-bold uppercase">Name</p>
+                        <p className="text-base">{name}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <TiTickOutline className="text-green-500 text-2xl mt-1" />
+                      <div>
+                        <p className="text-sm font-bold uppercase">Model</p>
+                        <p className="text-base">{model}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <TiTickOutline className="text-green-500 text-2xl mt-1" />
+                      <div>
+                        <p className="text-sm font-bold uppercase">Brand</p>
+                        <p className="text-base">{brand}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <TiTickOutline className="text-green-500 text-2xl mt-1" />
+                      <div>
+                        <p className="text-sm font-bold uppercase">Origin</p>
+                        <p className="text-base">{manufacturer}</p>
+                      </div>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <TiTickOutline className="text-green-500 text-2xl mt-1" />
+                      <div>
+                        <p className="text-sm font-bold uppercase">Specification</p>
+                        <p className="text-base">{assembly}</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                {/* Download Button */}
+                <div className="mt-8">
+                  <a
+                    href={pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-8 py-4 bg-green-600 hover:bg-green-700 text-white text-lg font-bold rounded-full shadow-lg transition-transform duration-200 transform hover:scale-105"
+                  >
+                    Download Catalog
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Footer */}
+          <div className="mt-10 text-center text-sm text-gray-500">
+            <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 };
 
 export default Machine;

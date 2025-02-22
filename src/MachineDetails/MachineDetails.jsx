@@ -5,6 +5,7 @@ import { useLoaderData } from 'react-router-dom';
 
 const MachineDetails = () => {
     const data = useLoaderData();
+    // @ts-ignore
     const machine = data[ 0 ];
     console.log( machine );
     const { name, model, brand, manufacturer, assembly, image, pdf } = machine;
